@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Ventana modal</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="estilos.css">
+	</head>
+	<style>
+		* {box-sizing: border-box}
+		img {
+			vertical-align: middle;
+			border-radius: 5px;
+		}
+
+		/* Slideshow container */
+		.slideshow-container {
+			width: 80%;
+		  max-width: 1000px;
+		  position: relative;
+		  margin: auto;
+
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -22px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 18px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: rgba(0,0,0,0.8);
+		}
+
+		/* Caption text */
+		.text {
+		  color: #f2f2f2;
+		  font-size: 15px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  bottom: 8px;
+		  width: 100%;
+		  text-align: center;
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+		  cursor: pointer;
+		  height: 15px;
+		  width: 15px;
+		  margin: 0 2px;
+		  background-color: white;
+		  border-radius: 50%;
+		   border-style: solid;
+    	border-color: orange;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
+
+		.active, .dot:hover {
+		  background-color: orange;
+
+		}
+
+		/* Fading animation */
+		.fade {
+		border-radius: 5px;
+		  -webkit-animation-name: fade;
+		  -webkit-animation-duration: 1.5s;
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
+
+
+		@-webkit-keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+		  .prev, .next,.text {font-size: 11px}
+		}
+		.button {
+		border-radius: 5px;
+		max-width: 1000px;
+	    background-color: orange;
+	    border: none;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    cursor: pointer;
+		}
+		a:link {
+		    color: orange; 
+		    background-color: transparent; 
+		    text-decoration: none;
+		}
+		.buttons{
+			padding-top: 4%;
+		}
+		</style>
+	<body>
+		<div class="contenedor">
+			<a href="#openmodal" class="open">Abrir Ventana</a>
+			<section id="openmodal" class="modalDialog">
+				<section class="modal">
+					<a href="#close" class="close"> X </a>
+					  <section class='modal-item uno'>
+					    <h2>ANIMAL</h2>
+					    <p>Sabadell, Barcelona</p>
+					    <a href="www.google.es">Protectora</a>
+					    <p>El perro (Canis lupus familiaris), llamado perro doméstico o can,4 y coloquialmente chucho o tuso, y también choco; es un mamífero omnívorode la familia de los cánidos, que constituye una subespecie del lobo (Canis lupus). En 2001, se estimaba que había 400 millones de perros en el mundo.</p>
+					    <div class="buttons">
+					    <button class="button">Contacta con el refugio</button>
+					    <button class="button">Apadrina a</button>
+					    <button class="button">Compartir</button>
+							</div>
+
+					  </section>  
+					  <section class="imagen">
+					  	<div class="slideshow-container">
+
+							<div class="mySlides fade">
+							  <div class="numbertext">1 / 3</div>
+							  <img src="image.jpeg" style="width:100%">
+							
+							</div>
+
+							<div class="mySlides fade">
+							  <div class="numbertext">2 / 3</div>
+							  <img src="image2.jpg" style="width:100%">
+							
+							</div>
+
+							<div class="mySlides fade">
+							  <div class="numbertext">3 / 3</div>
+							  <img src="image3.png" style="width:100%">
+							 
+							</div>
+
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+							</div>
+							<br>
+
+							<div style="text-align:center">
+							  <span class="dot" onclick="currentSlide(1)"></span> 
+							  <span class="dot" onclick="currentSlide(2)"></span> 
+							  <span class="dot" onclick="currentSlide(3)"></span> 
+							</div>
+
+							<script>
+							var slideIndex = 1;
+							showSlides(slideIndex);
+
+							function plusSlides(n) {
+							  showSlides(slideIndex += n);
+							}
+
+							function currentSlide(n) {
+							  showSlides(slideIndex = n);
+							}
+
+							function showSlides(n) {
+							  var i;
+							  var slides = document.getElementsByClassName("mySlides");
+							  var dots = document.getElementsByClassName("dot");
+							  if (n > slides.length) {slideIndex = 1}    
+							  if (n < 1) {slideIndex = slides.length}
+							  for (i = 0; i < slides.length; i++) {
+							      slides[i].style.display = "none";  
+							  }
+							  for (i = 0; i < dots.length; i++) {
+							      dots[i].className = dots[i].className.replace(" active", "");
+							  }
+							  slides[slideIndex-1].style.display = "block";  
+							  dots[slideIndex-1].className += " active";
+							}
+							</script>
+					  </section>
+		
+					 	
+					</section>
+					</section>
+				</div>
+				</section>
+			</section>
+		</div>
+
+	</body>
+</html>
