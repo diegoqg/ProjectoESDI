@@ -29,7 +29,10 @@ CREATE TABLE protectora(
   direccion varchar(25) NOT NULL,
   telefono varchar(9) NOT NULL,
   contraseña varchar(15) NOT NULL,
-  imagen varchar(50) NOT NULL
+  imagen_protectora varchar(50) NOT NULL,
+  nombre_contacto varchar(30) NOT NULL,
+  apellido_contacto varchar(30) NOT NULL,
+  imagen_contacto varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE mascota(
