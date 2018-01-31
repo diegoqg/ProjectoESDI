@@ -3,7 +3,6 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 CREATE DATABASE IF NOT EXISTS pethome;
 
 USE pethome;
@@ -33,9 +32,6 @@ CREATE TABLE protectora(
   imagen varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-    
-
 CREATE TABLE mascota(
   idMascota int(5) NOT NULL auto_increment primary key,
   tipoAnimal ENUM('PERRO','GATO') NOT NULL,
@@ -45,6 +41,7 @@ CREATE TABLE mascota(
   tamaño ENUM('PEQUEÑO','MEDIANO','GRANDE') NOT NULL,
   sexo ENUM('MACHO','HEMBRA') NOT NULL,
   castrado ENUM('SI','NO') NOT NULL,
+  urgente ENUM('SI','NO') NOT NULL,
   idProtectora int(5) NOT NULL,
   descripcion varchar(500) NOT NULL,
   imagen varchar(50) NOT NULL
