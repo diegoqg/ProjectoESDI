@@ -24,7 +24,8 @@ hr{
 	clear:both
 }
 #miVentana{
-	position: responsive;
+	display: flex;
+	position: fixed;
 	margin-left:0px;
 	width: 700px; 
 	height: 200px; 
