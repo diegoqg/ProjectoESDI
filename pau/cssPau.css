@@ -1,44 +1,245 @@
 html{
 	margin:20px;
-	font-family:Helvetica
+	font-family:Helvetica;
 }
-.PBimagenMensaje{
+@media screen and (max-width:10000px) {
+	div.PBbandejaMensajesFuera {
+		border: solid 1px;
+		border-radius:9%;
+		border-color:grey;
+		margin-left:5%;
+		margin-top:10%;
+		float:left;
+		width:30%;
+	}
+	p.PBmensajeNombrePerroFuera{
+		margin-right:30%;
+		margin-left:5%;
+		float:left;
+		color:orange;
+	}
+	p.PBmensajeRazaPerroFuera{
+		float:left;
+		margin-left:5%;
+		margin-top:-5%;
+	}
+	p.PBmensajeFuera{
+		color:grey;
+		font-size:68%;
+		float:left;
+		margin-left:35%;
+		margin-top:-5%;
+	}
+}
+@media screen and (max-width:1000px) {
+	div.PBbandejaMensajesFuera {
+		border: solid 1px;
+		border-radius:9%;
+		border-color:grey;
+		margin-left:5%;
+		margin-top:10%;
+		float:left;
+		width:30%;
+	}
+	p.PBmensajeNombrePerroFuera{
+		margin-right:30%;
+		margin-left:5%;
+		float:left;
+		color:orange;
+	}
+	p.PBmensajeRazaPerroFuera{
+		float:left;
+		margin-left:5%;
+		margin-top:-5%;
+	}
+	p.PBmensajeFuera{
+		color:grey;
+		font-size:68%;
+		float:left;
+		margin-left:35%;
+		margin-top:-5%;
+	}
+}
+@media screen and (max-width:900px) {
+	div.PBbandejaMensajesFuera {
+		border: solid 1px;
+		border-radius:9%;
+		border-color:grey;
+		margin-left:5%;
+		margin-top:10%;
+		float:left;
+		width:40%;
+	}
+	p.PBmensajeNombrePerroFuera{
+		margin-right:30%;
+		margin-left:5%;
+		float:left;
+		color:orange;
+	}
+	p.PBmensajeRazaPerroFuera{
+		float:left;
+		margin-left:5%;
+		margin-top:-5%;
+	}
+	p.PBmensajeFuera{
+		color:grey;
+		font-size:68%;
+		float:left;
+		margin-left:35%;
+		margin-top:-5%;
+	}
+}
+@media screen and (max-width:800px) {
+	div.PBbandejaMensajesFuera {
+		border: solid 1px;
+		border-radius:9%;
+		border-color:grey;
+		margin-left:5%;
+		margin-top:10%;
+		float:left;
+		width:40%;
+	}
+	p.PBmensajeNombrePerroFuera{
+		margin-right:30%;
+		margin-left:5%;
+		float:left;
+		color:orange;
+	}
+	p.PBmensajeRazaPerroFuera{
+		float:left;
+		margin-left:5%;
+		margin-top:-5%;
+	}
+	p.PBmensajeFuera{
+		color:grey;
+		font-size:68%;
+		float:left;
+		margin-left:35%;
+		margin-top:-5%;
+	}
+}
+@media screen and (max-width:700px) {
+	div.PBbandejaMensajesFuera {
+		border: solid 1px;
+		border-radius:9%;
+		border-color:grey;
+		margin-left:5%;
+		margin-top:10%;
+		float:left;
+		width:50%;
+	}
+	p.PBmensajeNombrePerroFuera{
+		margin-right:30%;
+		margin-left:5%;
+		float:left;
+		color:orange;
+	}
+	p.PBmensajeRazaPerroFuera{
+		float:left;
+		margin-left:5%;
+		margin-top:-5%;
+	}
+	p.PBmensajeFuera{
+		color:grey;
+		font-size:68%;
+		float:left;
+		margin-left:90%;
+		margin-top:-5%;
+	}
+}
+@media screen and (max-width:600px) {
+	div.PBbandejaMensajesFuera {
+		border: solid 1px;
+		border-radius:9%;
+		border-color:grey;
+		margin-left:5%;
+		margin-top:10%;
+		float:left;
+		width:50%;
+	}
+	p.PBmensajeNombrePerroFuera{
+		margin-right:30%;
+		margin-left:5%;
+		float:left;
+		color:orange;
+	}
+	p.PBmensajeRazaPerroFuera{
+		float:left;
+		margin-left:5%;
+		margin-top:-5%;
+	}
+	p.PBmensajeFuera{
+		color:grey;
+		font-size:68%;
+		float:left;
+		margin-left:36%;
+		margin-top:-5%;
+	}
+}
+@media screen and (max-width:500px) {
+	div.PBbandejaMensajesFuera {
+		border: solid 1px;
+		border-radius:9%;
+		border-color:grey;
+		margin-left:5%;
+		margin-top:10%;
+		float:left;
+		width:66%;
+	}
+	p.PBmensajeNombrePerroFuera{
+		margin-right:30%;
+		margin-left:5%;
+		float:left;
+		color:orange;
+	}
+	p.PBmensajeRazaPerroFuera{
+		float:left;
+		margin-left:5%;
+		margin-top:-5%;
+	}
+	p.PBmensajeFuera{
+		color:grey;
+		font-size:68%;
+		float:left;
+	}
+}
+@media screen and (max-width:400px) {
+	div.PBbandejaMensajesFuera {
+		border: solid 1px;
+		border-radius:9%;
+		border-color:grey;
+		margin-left:5%;
+		margin-top:10%;
+		float:left;
+		width:73%;
+	}
+	.PBmensajeFueraDIV{
+		float:right;
+		margin-right:0px;
+		width:65%;
+	}
+	p.PBmensajeNombrePerroFuera{
+		color:orange;
+		font-size:88%;
+	}
+	p.PBmensajeRazaPerroFuera{
+		font-size:88%;
+	}
+	p.PBmensajeFuera{
+		color:grey;
+		font-size:68%;
+		margin-top:-15px;
+	}
+}
+
+img.PBimagenMensajeFuera{
+	margin-left:10%;
+	margin-top:8%;
+	margin-bottom:8%;
 	float:left;
-	margin-bottom:10px
+	border-radius: 20%;
 }
-.PBtituloMensaje{
-	float:left;
-	margin-left:10px;
-	margin-top:-20px
-}
-p.PBasuntoMensaje{
-	font-size:80%;
-	margin-top:-15px
-}
-p.PBmensaje{
-	float:left;
-	margin-left:50px;
-	margin-top:0px
-}
+
 hr{
-	clear:both
-}
-#miVentana{
-	display: flex;
-	position: fixed;
-	margin-left:0px;
-	width: 700px; 
-	height: 200px; 
-	top: 0; 
-	left: 0; 
-	font-family:Verdana, Arial, Helvetica, sans-serif; 
-	font-size: 12px; 
-	font-weight: normal; 
-	border: #333333 1.5px solid; 
-	background-color: #FAFAFA; 
-	color: #000000;
-	padding:15px;
-	padding-left:20px;
-	padding-right:20px;
-	display:none
+	clear:both;
 }

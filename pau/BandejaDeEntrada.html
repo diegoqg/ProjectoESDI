@@ -2,49 +2,15 @@
 <html lang="es">
 <link rel="stylesheet" type="text/css" href="cssPau.css" title="Color" />
 	<body>
-		<div id="body">
-		<div class="PBtitulo">
-			<h1>Bandeja de Entrada</h1>
-		</div>
-		<hr>
-		<div class="PBmensaje" onclick="mostrarVentana()">
-			<img class="PBimagenMensaje" src="fotoPerro.jpg" alt="fotoPerro" height="80" width="80">
-			<div class="PBtituloMensaje">
-				<h5>Pongo</h5>
-				<p class="PBasuntoMensaje">Refugio Pepito</p>
-			</div>
-			<div>
-				<p class="PBmensaje">Hola, estaria interesado en Pongo. ¿Cuando lo podria ver?</p>
+		<div class="PBbandejaMensajesFuera">
+			<img class="PBimagenMensajeFuera" src="fotoPerro.jpg" alt="fotoPerro" height="55 width="55">
+			<div class="PBmensajeFueraDIV">
+				<p class="PBmensajeNombrePerroFuera">Coco</p>
+				<p class="PBmensajeRazaPerroFuera">Mestizo</p>
+				<p class="PBmensajeFuera">Podeis venir cuando..</p>
 			</div>
 			<hr>
+			
 		</div>
-		</div>
-		<div id="miVentana">
-			<p>Foto</p>
-			<button onclick="ocultarVentana()">Cerrar Mensaje</button>
-		</div>
-		<script>
-			function mostrarVentana(){
-				var body = document.getElementById('body');
-				document.body.style.backgroundColor="grey"
-				body.style.backgroundColor="grey";
-				body.style.opacity = "0.2";
-				
-				var ventana = document.getElementById('miVentana');
-				ventana.style.marginTop = "100px";
-				ventana.style.left = ((document.body.clientWidth-350) / 2) +  "px";
-				ventana.style.display = 'block';
-				ventana.style.opacity = "1";
-			}
-			function ocultarVentana(){
-			var body = document.getElementById('body');
-				body.style.backgroundColor="white";
-				body.style.opacity = "1";
-				document.body.style.backgroundColor="white"
-				
-				var ventana = document.getElementById('miVentana');
-				ventana.style.display = 'none';
-			}
-		</script>
 	</body>
 </html>
