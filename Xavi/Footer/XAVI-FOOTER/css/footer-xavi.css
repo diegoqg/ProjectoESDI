@@ -21,9 +21,14 @@ td, th {
 }
 
 /* Footer links LEFT */
-.footer-distributed .footer-left-titol{
-	font-size: 22px;
+.footer-distributed .footer-left-titol a{
+	font-size: 24px;
 	font-weight: bold;
+	color:  #ffe0cc;
+}
+.footer-distributed .footer-left-detall a{
+	font-size: 16px;
+	font-weight: normal;
 	color:  #ffe0cc;
 }
 .footer-distributed .footer-left-detall{
@@ -43,6 +48,7 @@ td, th {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
+	font-size: 20px;
 
 	color: #ffffff;
 }
