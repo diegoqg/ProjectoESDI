@@ -1,0 +1,45 @@
+
+<div class="footer-left">
+	<div class="footer-links">
+	<table>
+		<tr>
+			<th>Nosotros</th>
+			<th>Contacto</th>
+		</tr>
+		<tr>
+			<td>Ayuda</td>
+			<td>Calle TAL 123</td>
+		</tr>
+		<tr>
+			<td>Políticas</td>
+			<td>08015 Barcelona</td>
+		</tr>
+		<tr>
+			<td>Condiciones</td>
+			<td>2018</td>
+		</tr>
+		<tr>
+			<td>Privacidad</td>
+			<td>T 123 456 789</td>
+		</tr>
+	</table>
+	</div>
+</div>
+<div class="footer-left">
+				<div class="footer-links">			
+					<p>Nosotros</p>
+					<p>Contacto</p>
+				</div>
+				<div class="footer-links-left">
+					<a href="#">Ayuda</a><br>
+					<a href="#">Políticas</a><br>
+					<a href="#">Condiciones</a><br>
+					<a href="#">Privacidad</a><br>
+				</div>
+				<div class="footer-links">
+					<a href="#">Ayuda</a>
+					<a href="#">Políticas</a>
+					<a href="#">Condiciones</a>
+					<a href="#">Privacidad</a>
+				</div>							
+			</div>
