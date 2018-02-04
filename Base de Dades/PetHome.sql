@@ -59,6 +59,7 @@ CREATE TABLE raza(
 CREATE TABLE mensajeria(
   idUsuario int(5) NOT NULL,
   idProtectora int(5) NOT NULL,
+  idMascota int(5) NOT NULL,
   idMensaje int(5) NOT NULL auto_increment,
   mensaje varchar(300) NOT NULL,
   fecha datetime,
@@ -78,6 +79,7 @@ ALTER TABLE mascota
     
 ALTER TABLE mensajeria
 	ADD CONSTRAINT FK_USUARIO_MENSAJERIA FOREIGN KEY (idUsuario) REFERENCES usuario (idUsuario),
+	ADD CONSTRAINT FK_MASCOTA_MENSAJERIA FOREIGN KEY (idMascota) REFERENCES mascota (idMascota),
     ADD CONSTRAINT FK_PROTECTORA_MENSAJERIA FOREIGN KEY (idProtectora) REFERENCES protectora (idProtectora);
 	
 ALTER TABLE usuario
@@ -86,6 +88,10 @@ ALTER TABLE usuario
 ALTER TABLE protectora
 	ADD CONSTRAINT FK_PROTECTORA_COMUNIDAD FOREIGN KEY (comunidad) REFERENCES comunidades (idComunidad);
 
+	
+
+	
+	
 INSERT INTO raza (especie,nombre) VALUES
 	('PERRO','Pastor Alemán'),
     ('PERRO','Labrador Retriever'),
@@ -144,28 +150,81 @@ INSERT INTO raza (especie,nombre) VALUES
 	('GATO','Ragdoll'),
 	('GATO','Maine Coon'),
 	('GATO','Bengala'),
-	('GATO','Sphynx');
+	('GATO','Sphynx'),
+	('GATO','Abisinio'),
+	('GATO','Azul ruso'),
+	('GATO','Burmés'),
+	('GATO','Bobtail Americano'),
+	('GATO','Siberiano'),
+	('GATO','Gato exótico'),
+	('GATO','Scottish Fold'),
+	('GATO','American shorthair'),
+	('GATO','Sagrado de Birmania'),
+	('GATO','Cornish rex'),
+	('GATO','Ocicat'),
+	('GATO','Bosque de Noruega'),
+	('GATO','Gato tonkinés'),
+	('GATO','Angora turco'),
+	('GATO','Gato Manx'),
+	('GATO','Devon rex'),
+	('GATO','Mau egipcio'),
+	('GATO','Gato Van Turco'),
+	('GATO','Curl Americano'),
+	('GATO','Bombay'),
+	('GATO','Gato himalayo'),
+	('GATO','Chartreux'),
+	('GATO','Gato balinés'),
+	('GATO','Gato Savannah'),
+	('GATO','Korat'),
+	('GATO','Bobtail japonés'),
+	('GATO','Singapura'),
+	('GATO','Ragamuffin'),
+	('GATO','LaPerm'),
+	('GATO','Gato Somalí'),
+	('GATO','Selkirk rex'),
+	('GATO','Habana brown'),
+	('GATO','American wirehair'),
+	('GATO','Gato oriental de pelo largo'),
+	('GATO','Cymric'),
+	('GATO','Munchkin'),
+	('GATO','Snowshoe'),
+	('GATO','Nebelung'),
+	('GATO','Gato color point'),
+	('GATO','Pixie Bob'),
+	('GATO','Gato oriental'),
+	('GATO','Burmilla'),
+	('GATO','Dragon Li'),
+	('GATO','Peterbald');
    
 	
 INSERT INTO comunidades (idComunidad, comunidad) VALUES
-(1, 'Andalucía'),
-(2, 'Aragón'),
-(3, 'Principado de Asturias'),
-(4, 'Illes Balears'),
-(5, 'Canarias'),
-(6, 'Cantabria'),
-(7, 'Castilla y León'),
-(8, 'Castilla - La Mancha'),
-(9, 'Cataluña'),
-(10, 'Comunidad Valenciana'),
-(11, 'Extremadura'),
-(12, 'Galicia'),
-(13, 'Comunidad de Madrid '),
-(14, 'Región de Murcia'),
-(15, 'Comunidad Foral de Navarra'),
-(16, 'País Vasco'),
-(17, 'La Rioja'),
-(18, 'Ceuta'),
-(19, 'Melilla');
+	(1, 'Andalucía'),
+	(2, 'Aragón'),
+	(3, 'Principado de Asturias'),
+	(4, 'Illes Balears'),
+	(5, 'Canarias'),
+	(6, 'Cantabria'),
+	(7, 'Castilla y León'),
+	(8, 'Castilla - La Mancha'),
+	(9, 'Cataluña'),
+	(10, 'Comunidad Valenciana'),
+	(11, 'Extremadura'),
+	(12, 'Galicia'),
+	(13, 'Comunidad de Madrid '),
+	(14, 'Región de Murcia'),
+	(15, 'Comunidad Foral de Navarra'),
+	(16, 'País Vasco'),
+	(17, 'La Rioja'),
+	(18, 'Ceuta'),
+	(19, 'Melilla');
     
+INSERT INTO usuario (nombre,apellido1,apellido2,email,comunidad,telefono,contraseña,imagen) VALUES
+	('Pau','Barbarroja','Claramunt','paubarbarroja@gmail.com',9,'679705761',PASSWORD('1234'),'img.png');
+INSERT INTO protectora(nombre,email,NIF,comunidad,direccion,telefono,contraseña,imagen_protectora,nombre_contacto,apellido_contacto,imagen_contacto) VALUES
+	('protectoraAnimanilsta','animales@gmail.com','L87654392',9,'CALLE JUVENAL 1','987654321',PASSWORD('1234'),'img.jpg','Maria Luisa','Fernandez','contancto.jpg');
+INSERT INTO mascota (tipoAnimal,nombre,raza,edat,tamaño,sexo,castrado,urgente,idProtectora,descripcion,imagen) VALUES
+	('PERRO','Coco',1,3,'PEQUEÑO','MACHO','SI','NO',1,'PERRO PEQUEÑO CON GANAS DE TENER UNA FAMILIA MOVIDA, LE GUSTA MUCHO JUGAR CON LOS MAS PEQUEÑOS DE LA CASA','perro.img');
+INSERT INTO mensajeria(idUsuario,idProtectora,idMascota,mensaje,fecha) VALUES
+	(1,1,1,'Hola buenas me gustaria conocer a Coco, ¿cuando podria ir a verlo?',SYSDATE());
+	
 COMMIT;

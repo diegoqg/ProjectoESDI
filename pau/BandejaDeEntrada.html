@@ -2,6 +2,7 @@
 <html lang="es">
 <link rel="stylesheet" type="text/css" href="cssPau.css" title="Color" />
 	<body>
+		<div class="contenido">
 		<div class="PBbandejaMensajesFuera">
 			<img class="PBimagenMensajeFuera" src="fotoPerro.jpg" alt="fotoPerro" height="55 width="55">
 			<div class="PBmensajeFueraDIV">
@@ -10,7 +11,48 @@
 				<p class="PBmensajeFuera">Podeis venir cuando..</p>
 			</div>
 			<hr>
-			
+			<img class="PBimagenMensajeFuera" src="fotoPerro.jpg" alt="fotoPerro" height="55 width="55">
+			<div class="PBmensajeFueraDIV">
+				<p class="PBmensajeNombrePerroFuera">Coco</p>
+				<p class="PBmensajeRazaPerroFuera">Mestizo</p>
+				<p class="PBmensajeFuera">Podeis venir cuando..</p>
+			</div>
+			<?php
+				$servername = "localhost";
+				$username = "root";
+				$password = "";
+				$dbname = "pethome";
+
+				$conn = new mysqli($servername, $username, $password, $dbname);
+						
+				if ($conn->connect_errno) {
+					 echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+				}
+				echo $mysqli->host_info . "\n";
+
+				$sql = "SELECT * FROM mensajeria";
+				$result = mysqli_query($conn, $sql);
+					
+				if ($result) {
+					while($row = $result->fetch_assoc()) {
+						echo "<option value=" . $row["idMascota"]. ">" . $row["idMascota"]. "</option>";
+					}
+				} else {
+					echo "0 results";
+				}
+				$conn->close();
+			?>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		</div>
 	</body>
 </html>
