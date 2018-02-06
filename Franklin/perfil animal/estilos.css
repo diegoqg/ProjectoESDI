@@ -63,7 +63,7 @@ a.close{
 	margin-right:1%;
 	margin-top: 1%;
 	color: white; 
-	background-color: orange; 
+	background-color: #F88425; 
 	text-decoration: none;
 }
 
@@ -75,7 +75,7 @@ section.modal{
 	margin: 10% auto;
 	padding: 20px;
 	position: relative;
-	width: 60%;
+	width: 100%;
 	max-width: 1000px;
 	display: flex;
 	display: -webkit-flex;
@@ -117,15 +117,16 @@ p{
 	font-weight: bold;
 }
 .infoAnimal p{
+	margin-left: 3px;
 	font-family: monospace;
 	font-size: 1.5;
 	line-height: 1.6;
 }
 .linkProtectora a{
 	font-family: monospace;
-	font-size: 1.5;
+	font-size: 17px;
 	line-height: 1.6;
-	color: orange; 
+	color: #F88425; 
 	background-color: transparent; 
 	text-decoration: none;
 }
@@ -135,6 +136,15 @@ p{
 	line-height: 1.6;
 }
 .titulo h2{
-	color: orange;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-style: bold;
+	color: #F88425;
 }
-
+.ubicacion img{
+	width: 15px;
+	padding-bottom: 2px;
+}
+.linkProtectora img{
+	width: 20px;
+	padding-bottom: 2px;
+}
