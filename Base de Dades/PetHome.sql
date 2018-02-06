@@ -15,7 +15,7 @@ CREATE TABLE usuario(
   email varchar(30) NOT NULL,
   comunidad int(5) NOT NULL,
   telefono varchar(9) NOT NULL,
-  contraseña varchar(15) NOT NULL,
+  contraseña varchar(40) NOT NULL,
   imagen varchar(50)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -28,7 +28,7 @@ CREATE TABLE protectora(
   comunidad int(5) NOT NULL,
   direccion varchar(25) NOT NULL,
   telefono varchar(9) NOT NULL,
-  contraseña varchar(15) NOT NULL,
+  contraseña varchar(40) NOT NULL,
   imagen_protectora varchar(50) NOT NULL,
   nombre_contacto varchar(30) NOT NULL,
   apellido_contacto varchar(30) NOT NULL,
