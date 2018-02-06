@@ -41,13 +41,16 @@ CREATE TABLE mascota(
   nombre varchar(30) NOT NULL,
   raza int(2) NOT NULL,
   edat int(2) NOT NULL CHECK(0<edat<20),
+  unidadEdad ENUM('MESES','AÑOS') NOT NULL,
   tamaño ENUM('PEQUEÑO','MEDIANO','GRANDE') NOT NULL,
   sexo ENUM('MACHO','HEMBRA') NOT NULL,
   castrado ENUM('SI','NO') NOT NULL,
   urgente ENUM('SI','NO') NOT NULL,
   idProtectora int(5) NOT NULL,
   descripcion varchar(500) NOT NULL,
-  imagen varchar(50) NOT NULL
+  imagenPerfil varchar(50) NOT NULL,
+  imagen1 varchar(50) NOT NULL,
+  imagen2 varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE raza(

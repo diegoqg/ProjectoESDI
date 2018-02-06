@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="cssPau.css" title="Color" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<body>
+	
+	
 	<script type="text/javascript">
+		<!--Funció per enviar missatges -->
 		function enviar(){
 			var fecha = new Date();
 			var dia = fecha.getDate();
@@ -20,32 +24,37 @@
 			if(txt==""){
 			}else{
 				$('.PBmensajes').append('<div class="PBmensajeLocal"><p class="PBmensajeTexto">'+txt+'</p><p class="PBmensajeFecha"> '+dia+' de '+meses[mes]+'. de '+año+'</p></div>');
-				$('.PBmensajes').append('<img class="PBimagenLocal" src="persona1.jpg" alt="fotoPersona" height="55" width="55">');
+				$('.PBmensajes').append('<img class="PBimagenLocal" src="imagenes/persona1.jpg" alt="fotoPersona" height="55" width="55">');
 				
 				actualizarDiv();
+				$('.PBtextoEnviar').val('');
 			}
 		}
+		<!--Scroll del panell de missatges-->
 		function actualizarDiv(){
 			$(".PBmensajes").animate({ scrollTop: $('.PBmensajes')[0].scrollHeight}, 100);
 		}
 	</script>
+	
+	
+		<!-- panell dels diferents missatges -->
 		<div class="contenido">
 		<div class="PBbandejaMensajesFuera">
-			<img class="PBimagenMensajeFuera" src="fotoPerro.jpg" alt="fotoPerro" height="55 width="55">
+			<img class="PBimagenMensajeFuera" src="imagenes/fotoPerro.jpg" alt="fotoPerro" height="55 width="55">
 			<div class="PBmensajeFueraDIV">
 				<p class="PBmensajeNombrePerroFuera">Coco</p>
 				<p class="PBmensajeRazaPerroFuera">Mestizo</p>
 				<p class="PBmensajeFuera">Podeis venir cuando..</p>
 			</div>
 			<hr>
-			<img class="PBimagenMensajeFuera" src="fotoPerro.jpg" alt="fotoPerro" height="55 width="55">
+			<img class="PBimagenMensajeFuera" src="imagenes/fotoPerro.jpg" alt="fotoPerro" height="55 width="55">
 			<div class="PBmensajeFueraDIV">
 				<p class="PBmensajeNombrePerroFuera">Coco</p>
 				<p class="PBmensajeRazaPerroFuera">Mestizo</p>
 				<p class="PBmensajeFuera">Podeis venir cuando..</p>
 			</div>
 			
-			<!--<?php
+			<!--?php
 				$servername = "localhost";
 				$username = "root";
 				$password = "";
@@ -71,11 +80,11 @@
 				$conn->close();
 			?>-->
 		</div>
-<<<<<<< HEAD
-=======
+		
+		<!-- Panell de missatges per un animal  finestra central-->
 		<div class="PBmensajeVentana">	
 			<!-- Cabecera del chat de mensajeria. -->
-			<img class="PBimagenVisitanteVentana" src="persona.jpg" alt="fotoPersona" height="55" width="55">
+			<img class="PBimagenVisitanteVentana" src="imagenes/persona.jpg" alt="fotoPersona" height="55" width="55">
 			<div class="PBdivVentana">
 				<p class="PBmensajeNombreLocal">Carmen Gonzalez</p>
 				<p class="PBmensajeNombreVisitante">Asociación Animales Libres y Salvajes</p>
@@ -90,19 +99,19 @@
 					<p class="PBmensajeTexto">Hola! Nos ha gustado mucho Coco. Queremos más info!</p>
 					<p class="PBmensajeFecha"> 8 de dic. de 2017</p>
 				</div>
-				<img class="PBimagenLocal" src="persona1.jpg" alt="fotoPersona" height="55" width="55">
+				<img class="PBimagenLocal" src="imagenes/persona1.jpg" alt="fotoPersona" height="55" width="55">
 				
 				<div class="PBmensajeVisitante">
 					<p class="PBmensajeTexto">Hola! Gracias por contactarnos, normalmente quedamos con los interesados en adoptar para que conozcan al animal.¿Cuando os iria bien venir al refugio?</p>
 					<p class="PBmensajeFecha"> 8 de dic. de 2017</p>
 				</div>
-				<img class="PBimagenVisitante" src="persona.jpg" alt="fotoPersona" height="55" width="55">
+				<img class="PBimagenVisitante" src="imagenes/persona.jpg" alt="fotoPersona" height="55" width="55">
 				
 				<div class="PBmensajeLocal">
 					<p class="PBmensajeTexto">Pues nos iria bien el próximo jueves por la tarede, va bien?</p>
 					<p class="PBmensajeFecha"> 8 de dic. de 2017</p>
 				</div>
-				<img class="PBimagenLocal" src="persona1.jpg" alt="fotoPersona" height="55" width="55">
+				<img class="PBimagenLocal" src="imagenes/persona1.jpg" alt="fotoPersona" height="55" width="55">
 			</div>
 			
 			
@@ -112,7 +121,6 @@
 				<button class="PBboton" onclick="enviar();">Enviar</button>
 			</div>
 		</div>
->>>>>>> 96d19847ae0f9bc21882ab72a6c0ea6123d63d03
 		</div>
 	</body>
 </html>

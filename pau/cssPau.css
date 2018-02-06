@@ -46,15 +46,6 @@ hr{
 	background-color:#B8B8B8;
 }
 
-
-
-
-
-
-
-
-
-
 div.PBmensajeVentana{
 	height:550px;
 	border: solid 2px;
@@ -163,3 +154,30 @@ div.PBmensajeVisitante p.PBmensajeFecha{
 	height:368px;
 	overflow-y: scroll;
 }
+
+@media screen and (max-width:1135px) {
+	div.PBmensajeVentana{
+		clear:both;
+		margin-top:40px;
+		margin-left:auto;
+		margin-bottom:40px;
+	}
+	div.PBbandejaMensajesFuera{
+		margin-left:auto;
+	}
+}
+@media screen and (max-width:804px) {
+	div.PBmensajeVentana{
+		width:500px;
+	}
+	div.PBdivVentana{
+		width:80%;
+	}
+	div.PBmensajeVisitante {
+		width:75%;
+	}
+	div.PBmensajeLocal{
+		width:75%;
+	}
+}
+
