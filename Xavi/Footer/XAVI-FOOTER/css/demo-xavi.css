@@ -1,0 +1,15 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+@media (max-height:800px){
+	footer { 
+		position: static; 
+	}
+	header { 
+		padding-top:40px; 
+	}
+}
