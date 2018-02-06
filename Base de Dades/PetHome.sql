@@ -225,8 +225,8 @@ INSERT INTO usuario (nombre,apellido1,apellido2,email,comunidad,telefono,contras
 	('Pau','Barbarroja','Claramunt','paubarbarroja@gmail.com',9,'679705761',PASSWORD('1234'),'img.png');
 INSERT INTO protectora(nombre,email,NIF,comunidad,direccion,telefono,contraseña,imagen_protectora,nombre_contacto,apellido_contacto,imagen_contacto) VALUES
 	('protectoraAnimanilsta','animales@gmail.com','L87654392',9,'CALLE JUVENAL 1','987654321',PASSWORD('1234'),'img.jpg','Maria Luisa','Fernandez','contancto.jpg');
-INSERT INTO mascota (tipoAnimal,nombre,raza,edat,tamaño,sexo,castrado,urgente,idProtectora,descripcion,imagen) VALUES
-	('PERRO','Coco',1,3,'PEQUEÑO','MACHO','SI','NO',1,'PERRO PEQUEÑO CON GANAS DE TENER UNA FAMILIA MOVIDA, LE GUSTA MUCHO JUGAR CON LOS MAS PEQUEÑOS DE LA CASA','perro.img');
+INSERT INTO mascota (tipoAnimal,nombre,raza,edat,tamaño,sexo,castrado,urgente,idProtectora,descripcion,imagenPerfil,imagen1,imagen2) VALUES
+	('PERRO','Coco',1,3,'PEQUEÑO','MACHO','SI','NO',1,'PERRO PEQUEÑO CON GANAS DE TENER UNA FAMILIA MOVIDA, LE GUSTA MUCHO JUGAR CON LOS MAS PEQUEÑOS DE LA CASA','perro.img','perro.img','perro.img');
 INSERT INTO mensajeria(idUsuario,idProtectora,idMascota,mensaje,fecha) VALUES
 	(1,1,1,'Hola buenas me gustaria conocer a Coco, ¿cuando podria ir a verlo?',SYSDATE());
 	
