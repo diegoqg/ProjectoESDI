@@ -19,32 +19,5 @@
 			<hr>
 		</div>
 		</div>
-		<div id="miVentana">
-			<p>Foto</p>
-			<button onclick="ocultarVentana()">Cerrar Mensaje</button>
-		</div>
-		<script>
-			function mostrarVentana(){
-				var body = document.getElementById('body');
-				document.body.style.backgroundColor="grey"
-				body.style.backgroundColor="grey";
-				body.style.opacity = "0.2";
-				
-				var ventana = document.getElementById('miVentana');
-				ventana.style.marginTop = "100px";
-				ventana.style.left = ((document.body.clientWidth-350) / 2) +  "px";
-				ventana.style.display = 'block';
-				ventana.style.opacity = "1";
-			}
-			function ocultarVentana(){
-			var body = document.getElementById('body');
-				body.style.backgroundColor="white";
-				body.style.opacity = "1";
-				document.body.style.backgroundColor="white"
-				
-				var ventana = document.getElementById('miVentana');
-				ventana.style.display = 'none';
-			}
-		</script>
 	</body>
 </html>
