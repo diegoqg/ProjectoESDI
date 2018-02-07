@@ -5,32 +5,32 @@ html{
 	resize:both;
 }
 div.PBbandejaMensajesFuera {
-		border: solid 2px;
-		border-radius:9%;
-		border-color:#B8B8B8;
-		margin-left:5%;
-		margin-top:10%;
-		float:left;
-		width:20%;
-	}
-	.PBmensajeFueraDIV{
-		float:right;
-		width:65%;
-	}
-	p.PBmensajeNombrePerroFuera{
-		color:orange;
-		font-size:88%;
-		margin-top:25px;
-	}
-	p.PBmensajeRazaPerroFuera{
-		font-size:88%;
-		margin-top:-15px;
-	}
-	p.PBmensajeFuera{
-		color:grey;
-		font-size:68%;
-		margin-top:-10px;
-	}
+	border: solid 2px;
+	border-radius:9%;
+	border-color:#B8B8B8;
+	margin-left:5%;
+	margin-top:10%;
+	float:left;
+	width:20%;
+}
+.PBmensajeFueraDIV{
+	float:right;
+	width:65%;
+}
+p.PBmensajeNombrePerroFuera{
+	color:orange;
+	font-size:88%;
+	margin-top:25px;
+}
+p.PBmensajeRazaPerroFuera{
+	font-size:88%;
+	margin-top:-15px;
+}
+p.PBmensajeFuera{
+	color:grey;
+	font-size:68%;
+	margin-top:-10px;
+}
 
 img.PBimagenMensajeFuera{
 	margin-left:10%;

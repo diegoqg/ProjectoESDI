@@ -40,24 +40,12 @@
 		<!-- panell dels diferents missatges -->
 		<div class="contenido">
 		<div class="PBbandejaMensajesFuera">
-			<img class="PBimagenMensajeFuera" src="imagenes/fotoPerro.jpg" alt="fotoPerro" height="55 width="55">
-			<div class="PBmensajeFueraDIV">
-				<p class="PBmensajeNombrePerroFuera">Coco</p>
-				<p class="PBmensajeRazaPerroFuera">Mestizo</p>
-				<p class="PBmensajeFuera">Podeis venir cuando..</p>
-			</div>
-			<hr>
-			<img class="PBimagenMensajeFuera" src="imagenes/fotoPerro.jpg" alt="fotoPerro" height="55 width="55">
-			<div class="PBmensajeFueraDIV">
-				<p class="PBmensajeNombrePerroFuera">Coco</p>
-				<p class="PBmensajeRazaPerroFuera">Mestizo</p>
-				<p class="PBmensajeFuera">Podeis venir cuando..</p>
-			</div>
+			
 			
 			<?php
 				$servername = "localhost";
 				$username = "root";
-				$password = "1234";
+				$password = "";
 				$dbname = "pethome";
 
 				$conn = new mysqli($servername, $username, $password, $dbname);
@@ -68,69 +56,58 @@
 									
 				$conn->set_charset("utf8");
 				//Coger todos los mensajes
-				$sql = "SELECT * FROM mensajeria";
-				$result = mysqli_query($conn, $sql);
-				$contSQL = mysqli_fetch_row($result);
 				
-				//Variables BBDD
+				
+				$sql = "SELECT DISTINCT * FROM mensajeria GROUP BY idMascota";
+				$result = mysqli_query($conn, $sql);
+				$cont = 0;
+				
 				$idUsuario = "idUsuario";
 				$idProtectora = "idProtectora";
 				$idMascota = "idMascota";
 				$idMensaje = "idMensaje";
 				$mensaje = "mensaje";
 				$fecha = "fecha";
-				while ($line = mysqli_fetch_array($result)) {
-					$sql = "SELECT * FROM mascota WHERE idMascota=".$line[$idMascota];
-					$result = mysqli_query($conn, $sql);
-					$nombreAnimal = "nombre";
-					$razaAnimal = "raza";
-					
-					echo "afasfasd".$line[$nombreAnimal]." ".$line[$razaAnimal]."";
-					
-					$sql2 = "SELECT * FROM raza WHERE idRaza=".$line[$razaAnimal];
-					$result2 = mysqli_query($conn, $sql2);
-					
-					$contSQL=$contSQL-1;
-					/*
-					
-					$sql2 = "SELECT * FROM usuario WHERE idUsuario=".$line[$idUsuario];
-					$result2 = mysqli_query($conn, $sql2);
-					$nombreUsuario = "nombre";
-					$imagenUsuario = "imagen";
-					
-					$sql2 = "SELECT * FROM protectora WHERE idProtectora=".$line[$idProtectora];
-					$result2 = mysqli_query($conn, $sql2);
-					$nombreProtectora = "nombre";
-					$imagenUsuario = "imagen";
-					
-					*/
-				}
+				$nombre = "nombre";
+				$imagenPerro = "imagenPerfil";
+				$imagen = "imagen";
+				$raza = "raza";
+				$idraza = "idRaza";
 				
-				//Saber el numero de mascotas
 				$sql2 = "SELECT COUNT(*) FROM mensajeria";
 				$result2 = mysqli_query($conn, $sql2);
 				$contSQL = mysqli_fetch_row($result2);
 				$num_filas = $contSQL[0];
 
-
+				echo $num_filas;
+				
 				if ($num_filas > 0) {
 					while ($line = mysqli_fetch_array($result)) {
-						if($cont == 0){
-						echo "<img class=PBimagenMensajeFuera src=imagenes/fotoPerro.jpg alt=fotoPerro height=55 width=55>";
-						}
-						echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem; onclick=frankmodal(".$line[$idMascota].")>
-						  <div class=card-block>
-							<h4 class=card-title>".$line[$idUsuario]."</h4>
-							<p class=card-text>".$line[$idProtectora]."  ".$line[$mensaje]."  ".$line[$fecha]."</p>
-						  </div>
-						</div>";
-						
-						if($cont == 3 or $num_filas == 1){
-							 echo"</div>
-							 </div>";
-							$cont = 0;
-						}
+							$sql3 = "SELECT * FROM mascota";
+							$result3 = mysqli_query($conn, $sql3);
+							
+							if($line2 = mysqli_fetch_array($result3)){
+								if($line2[$idMascota]==$line[$idMascota]){
+									echo "<img class=PBimagenMensajeFuera src=".$line2[$imagenPerro]." alt=fotoPerro height=55 width=55>";
+							
+									$sql4 = "SELECT * FROM raza";
+									$result4 = mysqli_query($conn, $sql4);
+									
+									if($line3 = mysqli_fetch_array($result4)){
+										if($line2[$raza]==$line3[$idraza]){
+											echo "	<div class=PBmensajeFueraDIV>
+														<p class=PBmensajeNombrePerroFuera>".$line2[$nombre]."</p>
+														<p class=PBmensajeRazaPerroFuera>".$line3[$nombre]."</p>
+														<p class=PBmensajeFuera>".$line[$mensaje]."</p>
+													</div>";
+										}
+									}
+								}
+							}
 
+						if($num_filas!=1){
+							echo"<hr>";
+						}
 						$num_filas--;
 					}
 				}
