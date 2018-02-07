@@ -57,7 +57,7 @@
 			<?php
 				$servername = "localhost";
 				$username = "root";
-				$password = "";
+				$password = "1234";
 				$dbname = "pethome";
 
 				$conn = new mysqli($servername, $username, $password, $dbname);
@@ -79,13 +79,13 @@
 				$idMensaje = "idMensaje";
 				$mensaje = "mensaje";
 				$fecha = "fecha";
-				while ($contSQL!=0&&$line = mysqli_fetch_array($result)) {
+				while ($line = mysqli_fetch_array($result)) {
 					$sql = "SELECT * FROM mascota WHERE idMascota=".$line[$idMascota];
 					$result = mysqli_query($conn, $sql);
 					$nombreAnimal = "nombre";
 					$razaAnimal = "raza";
 					
-					echo "".$line[$nombreAnimal]." ".$line[$razaAnimal]."";
+					echo "afasfasd".$line[$nombreAnimal]." ".$line[$razaAnimal]."";
 					
 					$sql2 = "SELECT * FROM raza WHERE idRaza=".$line[$razaAnimal];
 					$result2 = mysqli_query($conn, $sql2);
