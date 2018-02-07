@@ -54,10 +54,10 @@
 				<p class="PBmensajeFuera">Podeis venir cuando..</p>
 			</div>
 			
-			<!--?php
+			<?php
 				$servername = "localhost";
 				$username = "root";
-				$password = "1234";
+				$password = "";
 				$dbname = "pethome";
 
 				$conn = new mysqli($servername, $username, $password, $dbname);
@@ -67,18 +67,11 @@
 				}
 									
 				$conn->set_charset("utf8");
-				//Coger todas las mascotas
+				//Coger todos los mensajes
 				$sql = "SELECT * FROM mensajeria";
 				$result = mysqli_query($conn, $sql);
-				$cont = 0;
-
-				//Saber el numero de mascotas
-				$sql2 = "SELECT COUNT(*) FROM mensajeria";
-				$result2 = mysqli_query($conn, $sql2);
-				$contSQL = mysqli_fetch_row($result2);
-				$num_filas = $contSQL[0];
-
-
+				$contSQL = mysqli_fetch_row($result);
+				
 				//Variables BBDD
 				$idUsuario = "idUsuario";
 				$idProtectora = "idProtectora";
@@ -86,14 +79,46 @@
 				$idMensaje = "idMensaje";
 				$mensaje = "mensaje";
 				$fecha = "fecha";
+				while ($contSQL!=0&&$line = mysqli_fetch_array($result)) {
+					$sql = "SELECT * FROM mascota WHERE idMascota=".$line[$idMascota];
+					$result = mysqli_query($conn, $sql);
+					$nombreAnimal = "nombre";
+					$razaAnimal = "raza";
+					
+					echo "".$line[$nombreAnimal]." ".$line[$razaAnimal]."";
+					
+					$sql2 = "SELECT * FROM raza WHERE idRaza=".$line[$razaAnimal];
+					$result2 = mysqli_query($conn, $sql2);
+					
+					$contSQL=$contSQL-1;
+					/*
+					
+					$sql2 = "SELECT * FROM usuario WHERE idUsuario=".$line[$idUsuario];
+					$result2 = mysqli_query($conn, $sql2);
+					$nombreUsuario = "nombre";
+					$imagenUsuario = "imagen";
+					
+					$sql2 = "SELECT * FROM protectora WHERE idProtectora=".$line[$idProtectora];
+					$result2 = mysqli_query($conn, $sql2);
+					$nombreProtectora = "nombre";
+					$imagenUsuario = "imagen";
+					
+					*/
+				}
+				
+				//Saber el numero de mascotas
+				$sql2 = "SELECT COUNT(*) FROM mensajeria";
+				$result2 = mysqli_query($conn, $sql2);
+				$contSQL = mysqli_fetch_row($result2);
+				$num_filas = $contSQL[0];
+
+
 				if ($num_filas > 0) {
 					while ($line = mysqli_fetch_array($result)) {
 						if($cont == 0){
-						echo "<div class=container>
-								<div class=row>";
+						echo "<img class=PBimagenMensajeFuera src=imagenes/fotoPerro.jpg alt=fotoPerro height=55 width=55>";
 						}
 						echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem; onclick=frankmodal(".$line[$idMascota].")>
-						  <img class=card-img-top src=".$line[$imagen]." alt=Card image cap>
 						  <div class=card-block>
 							<h4 class=card-title>".$line[$idUsuario]."</h4>
 							<p class=card-text>".$line[$idProtectora]."  ".$line[$mensaje]."  ".$line[$fecha]."</p>
@@ -111,7 +136,7 @@
 				}
 
 				$conn->close();
-			?>-->
+			?>
 		</div>
 		
 		<!-- Panell de missatges per un animal  finestra central-->
