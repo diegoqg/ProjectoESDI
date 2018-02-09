@@ -34,7 +34,8 @@ CREATE TABLE protectora(
   apellido_contacto varchar(30) NOT NULL,
   imagen_contacto varchar(50) NOT NULL,
   historia varchar(300) NOT NULL,
-  equipo varchar(300) NOT NULL
+  equipo varchar(300) NOT NULL,
+  horario varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE mascota(
