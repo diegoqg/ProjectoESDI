@@ -114,5 +114,5 @@
 	} else {
 		echo "Algo ha salido mal :C";
 	}
-	$conn->close();
+	$conn->close(); //Cerrar la conexión
 	?>
