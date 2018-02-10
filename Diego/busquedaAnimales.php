@@ -17,7 +17,7 @@
 	$cont = 0;
 
 	//Saber el numero de mascotas
-	$sql2 = "SELECT COUNT(*) FROM mascota";
+	$sql2 = "SELECT COUNT(*) FROM mascota WHERE ";//Emilio escribe las cosas aqui con lo del post
 	$result2 = mysqli_query($conn, $sql2);
 	$contSQL = mysqli_fetch_row($result2);
 	$num_filas = $contSQL[0];

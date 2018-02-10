@@ -7,20 +7,22 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style type="text/css">
 
-      body {
-        padding-top: 7.5%;
-      }
+    <!--CSS Diego para gen de Animales-->
+    <link rel="stylesheet" href="css/css_DiegoMOD.css">
 
-    </style>
+    <!-- CSS Xavito para el footer -->
+    <link rel="stylesheet" href="css/demo-xavi.css">
+    <link rel="stylesheet" href="css/footer-xavi.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-faded fixed-top" style="background-color: white">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="images/logo.jpg" width="50" height="50" alt="">
+            <img src="images/logo.png" width="150px" height="50px" alt="">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,13 +30,7 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Favorite</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Messages</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Login / Register</a>
+                <a class="nav-link" id="pruebaNaranjito">Login / Register</a>
               </li>
             </ul>
           </div>
