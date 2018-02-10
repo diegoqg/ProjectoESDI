@@ -1,8 +1,8 @@
-<?php require 'header_NL-I.php';
+<?php require 'header_NL-B.php';
 ?>
     <!--Hasta aqui iria en un PHP-->
     
-    <?php require 'todosAnimales.php';
+    <?php require 'busquedaAnimales.php';
     ?>
   
     <!-- Optional JavaScript -->

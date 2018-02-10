@@ -1,6 +1,6 @@
-
-      body {
-        padding-top: 7.5%;
+      #titleNaranjito{
+        color:#F88425;
+        margin: 2% 20%;
       }
 
       #pruebaNaranjito{
@@ -10,7 +10,7 @@
       #pruebaNaranjito:hover{
         color:#F88425;
         background-color: white;
-      }
+      }  
       #pruebaUrgente{
         position:relative;
       }
@@ -27,3 +27,17 @@
       bottom:45px; 
       padding:2px 10px; 
     }
+      .carousel-inner img {
+          width: 100%;
+          max-height: 750px;
+      }
+
+      .carousel-inner{
+       height: 750px;
+      }
+      body, html {
+  padding: 0; /* ¿por qué, carousel, por qué? */
+}
+.carousel {
+  margin-bottom: 0; /* ¿por qué, carousel, por qué? */
+}
