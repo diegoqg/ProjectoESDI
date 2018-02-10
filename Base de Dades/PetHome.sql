@@ -1,7 +1,4 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
+﻿
 
 CREATE DATABASE IF NOT EXISTS pethome;
 
@@ -44,11 +41,11 @@ CREATE TABLE mascota(
   nombre varchar(30) NOT NULL,
   raza int(2) NOT NULL,
   edat int(2) NOT NULL CHECK(0<edat<20),
-  unidadEdad ENUM('MESES','AÑOS') NOT NULL,
-  tamaño ENUM('PEQUEÑO','MEDIANO','GRANDE') NOT NULL,
-  sexo ENUM('MACHO','HEMBRA') NOT NULL,
-  castrado ENUM('SI','NO') NOT NULL,
-  urgente ENUM('SI','NO') NOT NULL,
+  unidadEdad ENUM('Meses','Años') NOT NULL,
+  tamaño ENUM('Pequeño','Mediano','Grande') NOT NULL,
+  sexo ENUM('Macho','Hembra') NOT NULL,
+  castrado ENUM('Si','No') NOT NULL,
+  urgente ENUM('Si','No') NOT NULL,
   idProtectora int(5) NOT NULL,
   descripcion varchar(500) NOT NULL,
   imagenPerfil varchar(50) NOT NULL,
@@ -230,7 +227,12 @@ INSERT INTO usuario (nombre,apellido1,apellido2,email,comunidad,telefono,contras
 INSERT INTO protectora(nombre,email,NIF,comunidad,direccion,telefono,contraseña,imagen_protectora,nombre_contacto,apellido_contacto,imagen_contacto) VALUES
 	('protectoraAnimanilsta','animales@gmail.com','L87654392',9,'CALLE JUVENAL 1','987654321',MD5('1234'),'img.jpg','Maria Luisa','Fernandez','imagenes\\persona1.jpg');
 INSERT INTO mascota (tipoAnimal,nombre,raza,edat,tamaño,sexo,castrado,urgente,idProtectora,descripcion,imagenPerfil,imagen1,imagen2) VALUES
-	('PERRO','Coco',1,3,'PEQUEÑO','MACHO','SI','NO',1,'PERRO PEQUEÑO CON GANAS DE TENER UNA FAMILIA MOVIDA, LE GUSTA MUCHO JUGAR CON LOS MAS PEQUEÑOS DE LA CASA','imagenes\\pastorAlemanPerfil.jpg','imagenes\\pastorAleman.jpg','imagenes\\pastorAleman2.jpg');
+	('PERRO','Coco',1,3,'Pequeño','Macho','Si','No',1,'PERRO PEQUEÑO CON GANAS DE TENER UNA FAMILIA MOVIDA, LE GUSTA MUCHO JUGAR CON LOS MAS PEQUEÑOS DE LA CASA','images\\perro1.jpg','imagenes\\pastorAleman.jpg','imagenes\\pastorAleman2.jpg'),
+  ('PERRO','Pongo',1,8,'Mediano','Hembra','Si','No',1,'PERRO PEQUEÑO CON GANAS DE TENER UNA FAMILIA MOVIDA, LE GUSTA MUCHO JUGAR CON LOS MAS PEQUEÑOS DE LA CASA','images\\perro2.jpg','imagenes\\pastorAleman.jpg','imagenes\\pastorAleman2.jpg'),
+  ('PERRO','Pulga',1,5,'Grande','Macho','Si','No',1,'PERRO PEQUEÑO CON GANAS DE TENER UNA FAMILIA MOVIDA, LE GUSTA MUCHO JUGAR CON LOS MAS PEQUEÑOS DE LA CASA','images\\perro3.jpg','imagenes\\pastorAleman.jpg','imagenes\\pastorAleman2.jpg'),
+  ('PERRO','Vito',1,15,'Pequeño','Macho','Si','No',1,'PERRO PEQUEÑO CON GANAS DE TENER UNA FAMILIA MOVIDA, LE GUSTA MUCHO JUGAR CON LOS MAS PEQUEÑOS DE LA CASA','images\\perro4.jpg','imagenes\\pastorAleman.jpg','imagenes\\pastorAleman2.jpg'),
+  ('PERRO','Mojito',1,18,'Mediano','Macho','Si','No',1,'PERRO PEQUEÑO CON GANAS DE TENER UNA FAMILIA MOVIDA, LE GUSTA MUCHO JUGAR CON LOS MAS PEQUEÑOS DE LA CASA','images\\perro5.jpg','imagenes\\pastorAleman.jpg','imagenes\\pastorAleman2.jpg');
+
 INSERT INTO mensajeria(idUsuario,idProtectora,propietario,idMascota,mensaje,fecha) VALUES
 	(1,1,1,1,'Hola buenas me gustaria conocer a Coco, ¿cuando podria ir a verlo?',SYSDATE());
 	
