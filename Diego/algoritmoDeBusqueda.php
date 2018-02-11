@@ -112,12 +112,9 @@
 	$nombreRaza = "nombreRaza";
 	$nombreProtectora = "nombreProtectora";
 	$nombreComunidad = "nombreComunidad";
-<<<<<<< HEAD
 
 	if ($result->num_rows == 0)
 		echo "<h1 id=titleNaranjito> No se han encontrado animales con estas caracteristicas</h1>";
-=======
->>>>>>> 9ae2adb796c74f31a1249ea6d26a84e3709742f5
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
