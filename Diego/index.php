@@ -3,7 +3,9 @@
 		require 'header_NL-I.php';
 	else{
 		if($_SESSION['login']==true)
-			require 'header_LP-I.php';
+			require 'header_SL-I.php';
+		if($_SESSION['login']==false)
+			require 'header_NL-I.php';
 	}
 ?>
     <!--Hasta aqui iria en un PHP-->

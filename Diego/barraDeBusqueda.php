@@ -6,7 +6,7 @@
 								<div class="input-group custom-search-form">
 									<span class="input-group-btn">
 										<button class="btn btn-default" type="submit" name="submit"> <!-- Botón de la barra de búsqueda -->
-											<img id="lupa" src="images/lupa.png" alt="lupa"> <!-- Imagen de lupa del boton -->
+											<img id="lupa" src="images/lupa.png" alt="lupa" width="20px" height="20px"> <!-- Imagen de lupa del boton -->
 										</button>
 									</span>
 								<select name="raza" id="raza" class="form-control"> <!-- Lista de las razas -->

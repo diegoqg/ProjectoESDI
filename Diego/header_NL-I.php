@@ -25,16 +25,20 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner" role="listbox" style="width: 100%; height: 45%;">
         <div class="carousel-item active">
-          <img class="d-block img-fluid" src="images/perro1.jpg" alt="First slide">
+          <img class="d-block img-fluid" src="images/Història toby.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block img-fluid" src="images/perro2.jpg" alt="Second slide">
+          <img class="d-block img-fluid" src="images/Història toby2.jpg" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block img-fluid" src="images/perro3.jpg" alt="Third slide">
+          <img class="d-block img-fluid" src="images/Història toby3.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block img-fluid" src="images/Història toby4.jpg" alt="Third slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
