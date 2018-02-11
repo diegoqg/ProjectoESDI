@@ -80,7 +80,7 @@
 	}
 	//Este es FIN del selector de posibilidades de filtrado del buscador
 	$sqlCount = "SELECT count(*) FROM mascota JOIN protectora ON mascota.idProtectora = protectora.idProtectora JOIN comunidades ON protectora.comunidad = comunidades.idComunidad JOIN raza ON mascota.raza = raza.idRaza " .$sql; //Número de regristros que devuelve la consulta
-	$sql = "SELECT * FROM mascota JOIN protectora ON mascota.idProtectora = protectora.idProtectora JOIN comunidades ON protectora.comunidad = comunidades.idComunidad JOIN raza ON mascota.raza = raza.idRaza " .$sql; //Consulta final
+	$sql = "SELECT m.idMascota AS idMascota, m.nombre AS nombrePerro, m.edat AS edad, m.unidadEdad AS unidadEdad, m.tamaño AS tamaño, m.sexo AS sexo, m.urgente AS urgente, m.imagenPerfil AS imagenPerfil, r.nombre AS nombreRaza, p.nombre AS nombreProtectora, c.comunidad AS nombreComunidad FROM mascota AS m JOIN protectora AS p ON m.idProtectora = p.idProtectora JOIN comunidades AS c ON p.comunidad = c.idComunidad JOIN raza AS r ON m.raza = r.idRaza " .$sql; //Consulta final
 	$result = mysqli_query($conn, $sql); //Ejecución de la consulta final
 	$numFilas = 0;
 
@@ -99,17 +99,17 @@
 	
 	$cont = 0;
 
-	$idMascota = "mascota.idMascota";
-	$nombreMascota = "mascota.nombre";
-	$edadMascota = "mascota.edat";
-	$uEdadMAscota = "mascota.unidadEdad";
-	$tamMascota = "mascota.tamaño";
-	$sexoMascota = "mascota.sexo";
-	$urgMascota = "mascota.urgente";
-	$imgPerfilMascota = "mascota.imagenPerfil";
-	$nombreRaza = "raza.nombre";
-	$nombreProtectora = "protectora.nombre";
-	$nombreComunidad = "comunidades.comunidad";
+	$idMascota = "idMascota";
+	$nombreMascota = "nombrePerro";
+	$edadMascota = "edad";
+	$uEdadMAscota = "unidadEdad";
+	$tamMascota = "tamaño";
+	$sexoMascota = "sexo";
+	$urgMascota = "urgente";
+	$imgPerfilMascota = "imagenPerfil";
+	$nombreRaza = "nombreRaza";
+	$nombreProtectora = "nombreProtectora";
+	$nombreComunidad = "nombreComunidad";
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
