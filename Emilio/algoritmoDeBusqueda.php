@@ -79,20 +79,38 @@
 		}
 	}
 	//Este es FIN del selector de posibilidades de filtrado del buscador
-	$sqlCount = "SELECT count(*) FROM mascota AS m JOIN protectora AS p ON m.idProtectora = p.idProtectora JOIN comunidades AS c ON p.comunidad = c.idComunidad JOIN raza AS r ON m.raza = r.idRaza " .$sql; //Número de regristros que devuelve la consulta
-	$sql = "SELECT * FROM mascota AS m JOIN protectora AS p ON m.idProtectora = p.idProtectora JOIN comunidades AS c ON p.comunidad = c.idComunidad JOIN raza AS r ON m.raza = r.idRaza " .$sql; //Consulta final
+	$sqlCount = "SELECT count(*) FROM mascota JOIN protectora ON mascota.idProtectora = protectora.idProtectora JOIN comunidades ON protectora.comunidad = comunidades.idComunidad JOIN raza ON mascota.raza = raza.idRaza " .$sql; //Número de regristros que devuelve la consulta
+	$sql = "SELECT m.idMascota AS idMascota, m.nombre AS nombrePerro, m.edat AS edad, m.unidadEdad AS unidadEdad, m.tamaño AS tamaño, m.sexo AS sexo, m.urgente AS urgente, m.imagenPerfil AS imagenPerfil, r.nombre AS nombreRaza, p.nombre AS nombreProtectora, c.comunidad AS nombreComunidad FROM mascota AS m JOIN protectora AS p ON m.idProtectora = p.idProtectora JOIN comunidades AS c ON p.comunidad = c.idComunidad JOIN raza AS r ON m.raza = r.idRaza " .$sql; //Consulta final
 	$result = mysqli_query($conn, $sql); //Ejecución de la consulta final
-	
+	$numFilas = 0;
+
 	$resultCount = mysqli_query($conn, $sqlCount); //
-	
-	if ($resultCount->num_rows > 0) {
+	if ($resultCount->num_rows == 0)
+		echo "<h1 id=titleNaranjito> No se han encontrado animales con estas caracteristicas</h1>";
+	else if ($resultCount->num_rows > 0) {
 		while($rowCount = $resultCount->fetch_assoc()) {
+			$numFilas = $rowCount["count(*)"];
 			// Código para representar visualmente el número de regristros que devuelve la consulta, utilizar la variable $rowCount["count(*)"]
 		}
 	} else {
 		echo "Algo ha salido mal :C";
 	}
+	//Esto es se usa para guardar las variables y luego poder printearlas (problemas con el echo y el "")
 	
+	$cont = 0;
+
+	$idMascota = "idMascota";
+	$nombreMascota = "nombrePerro";
+	$edadMascota = "edad";
+	$uEdadMAscota = "unidadEdad";
+	$tamMascota = "tamaño";
+	$sexoMascota = "sexo";
+	$urgMascota = "urgente";
+	$imgPerfilMascota = "imagenPerfil";
+	$nombreRaza = "nombreRaza";
+	$nombreProtectora = "nombreProtectora";
+	$nombreComunidad = "nombreComunidad";
+
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
 			/*
@@ -110,6 +128,46 @@
 			$row["p.nombre"] --> Nombre de la protectora de la mascota
 			$row["c.comunidad"] --> Nombre de la comunidad de la mascota
 			*/
+
+			//Codigo para poner los diferentes animales, tenemos un cont para ir dividiendo de 4 en 4
+			if($cont == 0){
+			    echo "<div class=container>
+      				<div class=row>";
+		    }
+		    //Diferencia si es urgente o no para poder printearlo
+		    if(strcmp($row[$urgMascota],"Si")==0)
+				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem; onclick=frankmodal(".$row[$idMascota].")>
+		          <img class=card-img-top src=".$row[$imgPerfilMascota]." alt=Card image cap>
+		          <p><b>¡URGENTE!</b></p> 
+		          <div class=card-block>
+		            <h4 class=card-title style=color:#F88425;>".$row[$nombreMascota]."</h4>
+		            <p class=card-text><img src=images/ubicacion.png width=25px height=25px alt=iconoUbicacion> <b>".$row[$nombreComunidad]."</b></br>
+		            ".$row[$edadMascota]." ".$row[$uEdadMAscota]." · ".$row[$sexoMascota]." · ".$row[$tamMascota]." · ".$row[$nombreRaza]."</br>
+		            <img src=images/caseta.png width=25px height=25px alt=iconoUbicacion> <u style = color:#F88425;>".$row[$nombreProtectora]."</u>
+		          </div>
+		        </div>";
+
+		    else
+				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem; onclick=frankmodal(".$row[$idMascota].")>
+		          <img class=card-img-top src=".$row[$imgPerfilMascota]." alt=Card image cap>
+		          <div class=card-block>
+		            <h4 class=card-title style=color:#F88425;>".$row[$nombreMascota]."</h4>
+		            <p class=card-text><img src=images/ubicacion.png width=25px height=25px alt=iconoUbicacion> <b>".$row[$nombreComunidad]."</b></br>
+		            ".$row[$edadMascota]." ".$row[$uEdadMAscota]." · ".$row[$sexoMascota]." · ".$row[$tamMascota]." · ".$row[$nombreRaza]."</br>
+		            <img src=images/caseta.png width=25px height=25px alt=iconoUbicacion> <u style = color:#F88425;>".$row[$nombreProtectora]."</u>
+		          </div>
+		        </div>";
+
+		        $cont++;
+		    if($cont == 4 or $numFilas == 1){
+		    	 echo"</div>
+	   			 </div></br></br>";
+		    	$cont = 0;
+		    }
+
+		    $numFilas--;
+		    //Hasta aqui
+
 		}
 	} else {
 		echo "Algo ha salido mal :C";
