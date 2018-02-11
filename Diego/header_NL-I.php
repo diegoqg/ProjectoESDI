@@ -67,7 +67,7 @@
               <?php require 'barraDeBusqueda.php'
               ?>
               <li class="nav-item">
-                <a class="nav-link" id="pruebaNaranjito" href="vaciolegal.html">Login / Register</a>
+                <a class="nav-link" id="pruebaNaranjito" href="vaciolegal.html" style="border-radius: 15px;">Login / Register</a>
               </li>
 
             </ul>

@@ -6,10 +6,12 @@
       #pruebaNaranjito{
         color: white;
         background-color: #F88425;
+        border-radius:15px;
       }
       #pruebaNaranjito:hover{
         color:#F88425;
         background-color: white;
+
       }  
       #pruebaUrgente{
         position:relative;
