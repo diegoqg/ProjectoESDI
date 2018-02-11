@@ -1,8 +1,17 @@
-<?php require 'header_NL-B.php';
+<?php 
+	if(isset($_SESSION['login']) == false)
+		require 'header_NL-B.php';
+	else{
+		if($_SESSION['login']==true)
+			require 'header_SL-B.php';
+		if($_SESSION['login']==false)
+			require 'header_NL-B.php';
+	}
+
 ?>
     <!--Hasta aqui iria en un PHP-->
     
-    <?php require 'busquedaAnimales.php';
+    <?php require 'algoritmoDeBusqueda.php';
     ?>
   
     <!-- Optional JavaScript -->

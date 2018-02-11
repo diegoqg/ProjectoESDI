@@ -1,4 +1,10 @@
-<?php require 'header_NL-I.php';
+<?php 
+	if(isset($_SESSION['login']) == false)
+		require 'header_NL-I.php';
+	else{
+		if($_SESSION['login']==true)
+			require 'header_LP-I.php';
+	}
 ?>
     <!--Hasta aqui iria en un PHP-->
     
