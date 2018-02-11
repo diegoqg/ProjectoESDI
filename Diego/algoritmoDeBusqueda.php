@@ -82,19 +82,21 @@
 	$sqlCount = "SELECT count(*) FROM mascota JOIN protectora ON mascota.idProtectora = protectora.idProtectora JOIN comunidades ON protectora.comunidad = comunidades.idComunidad JOIN raza ON mascota.raza = raza.idRaza " .$sql; //Número de regristros que devuelve la consulta
 	$sql = "SELECT * FROM mascota JOIN protectora ON mascota.idProtectora = protectora.idProtectora JOIN comunidades ON protectora.comunidad = comunidades.idComunidad JOIN raza ON mascota.raza = raza.idRaza " .$sql; //Consulta final
 	$result = mysqli_query($conn, $sql); //Ejecución de la consulta final
-	
+	$numFilas = 0;
+
 	$resultCount = mysqli_query($conn, $sqlCount); //
 	if ($resultCount->num_rows == 0)
 		echo "<h1 id=titleNaranjito> No se han encontrado animales con estas caracteristicas</h1>";
 	else if ($resultCount->num_rows > 0) {
 		while($rowCount = $resultCount->fetch_assoc()) {
+			$numFilas = $rowCount["count(*)"];
 			// Código para representar visualmente el número de regristros que devuelve la consulta, utilizar la variable $rowCount["count(*)"]
 		}
 	} else {
 		echo "Algo ha salido mal :C";
 	}
 	//Esto es se usa para guardar las variables y luego poder printearlas (problemas con el echo y el "")
-	$numFilas = $rowCount["count(*)"];
+	
 	$cont = 0;
 
 	$idMascota = "mascota.idMascota";
@@ -157,13 +159,13 @@
 		        </div>";
 
 		        $cont++;
-		    if($cont == 4 or $num_filas == 1){
+		    if($cont == 4 or $numFilas == 1){
 		    	 echo"</div>
 	   			 </div></br></br>";
 		    	$cont = 0;
 		    }
 
-		    $num_filas--;
+		    $numFilas--;
 		    //Hasta aqui
 
 		}
