@@ -19,7 +19,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-faded fixed-top" style="background-color: white">
+      <nav class="navbar navbar-expand-lg navbar-light bg-faded" style="background-color: white">
         <div class="container">
           <a class="navbar-brand" href="index.php">
             <img src="images/logo.png" width="150px" height="50px" alt="">
@@ -33,9 +33,9 @@
               <?php require 'barraDeBusqueda.php'
               ?>
               <li class="nav-item">
-                <a class="nav-link" id="pruebaNaranjito">Login / Register</a>
+                <a class="nav-link" id="pruebaNaranjito" href="vaciolegal.html" style="border-radius: 15px;">Login / Register</a>
               </li>
-              
+
             </ul>
           </div>
         </div>
