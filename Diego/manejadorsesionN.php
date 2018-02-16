@@ -1,0 +1,49 @@
+<?php
+$host_db = "localhost";
+$user_db = "root";
+$pass_db = "1234";
+$db_name = "pethome";
+$tbl_name = "usuario";
+$mysqli = new mysqli($host_db, $user_db, $pass_db, $db_name);
+
+if($mysqli->connect_errno){
+	echo "NO CONECTA!";
+}
+else{
+	if (isset($_POST['submit'])){
+		if ((isset($_POST['usuarioN'])) && (isset($_POST['passwordN']))){
+			$name = $_POST['usuarioN'];
+			$pass = $_POST['passwordN'];
+			$sql = "SELECT idUsuario,contraseña FROM usuario WHERE email = '".$name."'";
+			
+			$mysqli->set_charset("utf8");
+			
+			$result =  mysqli_query($mysqli, $sql);
+			if ($result->num_rows > 0){	
+				$registro = $result->fetch_object();
+				$passBD = $registro->contraseña;
+				$ids = $registro->idUsuario;
+				if ((md5($pass)) == $passBD) { 
+					session_start();
+					$_SESSION['login'] = true;
+					$_SESSION['id'] = $ids;
+					$_SESSION['e-mail'] = $name;
+					$_SESSION['tipo'] = "usuario";								
+					header('Location: http://localhost/proyecto/final.php');
+				}
+				else{					
+					echo "Username o Password estan incorrectos.";				
+				}
+			}
+			else{
+				echo "Usuario no encontrado!";
+			}						
+		}
+		else{
+			echo "Error e-mail y contraseña requeridos!";
+		}
+	}else{
+		echo "Error Acceso no Autorizado!";
+	}
+}
+?>

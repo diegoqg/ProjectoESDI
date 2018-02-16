@@ -1,7 +1,7 @@
 <?php
 	$servername = "localhost";
 	$username = "root";
-	$password = "";
+	$password = "1234";
 	$dbname = "pethome";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -78,7 +78,9 @@
 		            <h4 class=card-title style=color:#F88425;>".$line[$nombre]."</h4>
 		            <p class=card-text><img src=images/ubicacion.png width=25px height=25px alt=iconoUbicacion> <b>".$comunidadProtectora."</b></br>
 		            ".$line[$edad]." ".$line[$unidadEdad]." · ".$line[$sexo]." · ".$line[$tamaño]." · ".$razaPerro."</br>
-		            <img src=images/caseta.png width=25px height=25px alt=iconoUbicacion> <u style = color:#F88425;>".$nombreProtectora."</u>
+		            <a href=protectora.php?id=".$line[$idProtectora].">
+                  <u style = color:#F88425;><img src=images/caseta.png width=25px height=25px alt=iconoUbicacion>".$nombreProtectora."</u>
+                </a>
 		          </div>
 		        </div>";
 
@@ -89,7 +91,9 @@
 		            <h4 class=card-title style=color:#F88425;>".$line[$nombre]."</h4>
 		            <p class=card-text><img src=images/ubicacion.png width=25px height=25px alt=iconoUbicacion> <b>".$comunidadProtectora."</b></br>
 		            ".$line[$edad]." ".$line[$unidadEdad]." · ".$line[$sexo]." · ".$line[$tamaño]." · ".$razaPerro."</br>
-		            <img src=images/caseta.png width=25px height=25px alt=iconoUbicacion> <u style = color:#F88425;>".$nombreProtectora."</u>
+                <a href=protectora.php?id=".$line[$idProtectora].">
+		              <u style = color:#F88425;><img src=images/caseta.png width=25px height=25px alt=iconoUbicacion> ".$nombreProtectora."</u>
+                </a>
 		          </div>
 		        </div>";
 

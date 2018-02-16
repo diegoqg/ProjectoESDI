@@ -21,7 +21,9 @@
 			
 		</div>
 					
-		<table>				
+		<table style="
+			margin-left: 100px;
+		">				
 			<tr class="footer-left-titol">
 				<th><a href="cosas/Sobre Nosotros.PDF" style="text-decoration:none">Nosotros</a></th>
 				<th><a href="mailto:someone@example.com?Subject=Contacto" target="_blank" style="text-decoration:none">Contacto</a></th>

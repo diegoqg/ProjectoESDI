@@ -9,6 +9,7 @@
         border-radius:15px;
       }
       #pruebaNaranjito:hover{
+        text-align: center;
         color:#F88425;
         background-color: white;
 
@@ -53,4 +54,37 @@
 #raza{
     margin-left: -3px;
 }
+
+#reset{
+	margin-left: -3px;
+}
+
+header{
+	margin-bottom: 2%;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #cccccc;
+}
+
+#searchbar{
+	padding-top: 1.5%;
+}
+
+.menu-fixed{
+	width: 100%;
+	position: fixed;
+	z-index:4;
+	top: 0;
+	margin-bottom: 2%;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #cccccc;
+
+}
+
+.quitarSub{text-decoration:none;}
+.quitarSub:hover{text-decoration:none;}
+
+
+
 
