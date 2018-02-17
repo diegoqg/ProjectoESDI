@@ -105,6 +105,7 @@ p{
   	height: 20em;
   	margin: .2em 1em 1em 0;
   	width: 20em;
+  	max-width: 250px;
 	align-self: center;
 	-webkit-align-self: center;
 	-webkit-order: 2;

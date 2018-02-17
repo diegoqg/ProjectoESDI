@@ -73,9 +73,11 @@
 					    	<p>".$line[$descripcion]." </p>
 						</div>
 					    <div class=\"buttons\">
-						    <button class=\"button\">Contacta con el refugio</button>
-						    <button class=\"button\">Apadrina a ".$line[$nombreMascota]."</button>
-						    <button class=\"button\">Compartir</button>
+						   <form>
+						   	 	<input type=\"button\" onclick=\"window.location.href='mailto:protectora@example.com?Subject=Urgente';\" value=\"Contacta con el refugio\" class=\"button\" />
+						   	 	<input type=\"button\" onclick=\"window.location.href='mailto:protectora@example.com?Subject=".$line[$nombreMascota]."';\" value=\"Apadrina a ".$line[$nombreMascota]."\" class=\"button\" />
+							    <button class=\"button\">Compartir</button>
+							 </form>
 						</div>
 					  </section>
 					  <section class=\"imagen\">
