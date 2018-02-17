@@ -29,21 +29,21 @@ else{
 					$_SESSION['id'] = $ids;
 					$_SESSION['e-mail'] = $name;
 					$_SESSION['tipo'] = "usuario";								
-					header('Location: http://localhost/proyecto/final.php');
+					header('Location: index.php');
 				}
 				else{					
-					echo "Username o Password estan incorrectos.";				
+					header('Location: index.php#loginE');			
 				}
 			}
 			else{
-				echo "Usuario no encontrado!";
+				header('Location: index.php#loginE');	
 			}						
 		}
 		else{
-			echo "Error e-mail y contraseña requeridos!";
+			header('Location: index.php#loginE');	
 		}
 	}else{
-		echo "Error Acceso no Autorizado!";
+		header('Location: index.php#loginE');	
 	}
 }
 ?>

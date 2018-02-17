@@ -23,7 +23,7 @@
 
   </head>
   <body>
-    <header style="margin-top: 0;">
+    <header style="margin-top: 0; padding-top: 0;">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -71,9 +71,8 @@
             <ul class="navbar-nav ml-auto">
               <?php require 'barraDeBusqueda.php'
               ?>
-              <li class="nav-item">
-                <a class="nav-link" id="pruebaNaranjito" href="#openLogin" onclick="mostraLogin(1,1)">Login / Register</a>
-              </li>
+              <?php require 'difUsuario.php'
+              ?>
 
             </ul>
           </div>

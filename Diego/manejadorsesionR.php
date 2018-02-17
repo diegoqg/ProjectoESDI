@@ -29,21 +29,21 @@ else{
 					$_SESSION['id'] = $ids;
 					$_SESSION['e-mail'] = $name;
 					$_SESSION['tipo'] = "protectora";								
-					header('Location: http://localhost/proyecto/final.php');
+					header('Location: index.php');
 				}
 				else{					
-					echo "Fallo contraseña";			
+					header('Location: index.php#loginE');			
 				}
 			}
 			else{
-				echo "USARIO NOT FOUND";
+				header('Location: index.php#loginE');	
 			}						
 		}
 		else{
-			header('Location: http://localhost/proyecto/final.php');
+			header('Location: index.php#loginE');	
 		}
 	}else{
-		echo "Error Acceso no Autorizado!";
+		header('Location: index.php#loginE');	
 	}
 }
 ?>

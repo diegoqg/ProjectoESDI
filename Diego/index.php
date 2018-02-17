@@ -1,9 +1,11 @@
 <?php 
+    session_start();
 	if(isset($_SESSION['login']) == false)
 		require 'header_NL-I.php';
 	else{
-		if($_SESSION['login']==true)
+		if($_SESSION['login']==1){
 			require 'header_SL-I.php';
+        }
 		if($_SESSION['login']==false)
 			require 'header_NL-I.php';
 	}

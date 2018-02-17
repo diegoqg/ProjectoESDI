@@ -1,7 +1,8 @@
 <?php
+session_start();
 	$servername = "localhost";
 	$username = "root";
-	$password = "";
+	$password = "1234";
 	$dbname = "pethome";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,8 +14,9 @@
 	$conn->set_charset("utf8");
 
 	$id = $_SESSION['id'];
+	echo "ID USUARIO = ".$_SESSION['id']."tipo SESION = ".$_SESSION['tipo'];
 	if(strcmp($_SESSION['tipo'],"protectora")==0){
-		$sql = "SELECT * FROM protectora WHERE idProtectora = ".$id;
+		$sql = "SELECT * FROM protectora WHERE idProtectora = ".$_SESSION['id'];
 		$result =  mysqli_query($con, $sql);
 		if ($result->num_rows > 0){	
 			$registro = $result->fetch_object();
@@ -30,7 +32,7 @@
         }
 	}
 	if(strcmp($_SESSION['tipo'],"usuario")==0){
-		$sql = "SELECT * FROM usuario WHERE idUsuario = ".$id;
+		$sql = "SELECT * FROM usuario WHERE idUsuario = ".$_SESSION['id'];
 		$result =  mysqli_query($con, $sql);
 		if ($result->num_rows > 0){	
 			$registro = $result->fetch_object();

@@ -1,4 +1,5 @@
-<?php 
+<?php
+    session_start(); 
 	if(isset($_SESSION['login']) == false)
 		require 'header_NL-B.php';
 	else{
