@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("Gotham Rounded/GothamRnd-Bold.otf");
+}
+html {
+  font-family: "Gotham Rounded";
+}
+
+div.encuadrado{
+border-style: solid;
+border-width: 1px;
+border-color: grey;
+border-radius: 10px;
+padding-bottom:30px;
+padding-top:20px;
+padding-right:50px;
+padding-left:50px;
+margin-left:50px;
+flex:1;
+
+}
+.textborder{
+padding-bottom: 15px;
+border-bottom: 1px solid grey;
+}
+.datos{
+line-height: 1.8;
+}
+img.perfilRefugio{
+	width: 70px;
+	height: 70px;
+	border-radius: 100px;	
+	float: right;
+	
+}
+.naranjito{
+	background-color: #f88425;
+	border-radius: 10px;
+	text-align: center;
+	padding: 10px;
+	margin-top: 60px;
+	padding-left:25%;
+	padding-right:25%;
+	position:relative;
+}
+.pagination{
+	padding-left:35%;
+	padding-right:35%;
+    margin:0 auto;
+}
+.pagination li {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+	border-radius: 5px;
+	margin: 0 4px;
+    transition: background-color .3s;
+}
+.pagination li.active {
+    background-color: #f88425;
+    color: white;
+}
+.pagination li:hover:not(.active) {background-color: #ddd;}
