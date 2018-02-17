@@ -19,7 +19,9 @@
 
 <!-- CSS Y Script Murci para Modal Login -->
 	<link rel="stylesheet" href="css/estiloMurciano.css">	
-	<script src="js/murciscript.js"></script>	    
+	<script src="js/murciscript.js"></script>	
+
+	<link rel="stylesheet" href="css/borderAlbert.css">    
 
   </head>
   <body>

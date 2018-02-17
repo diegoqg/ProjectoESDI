@@ -4,6 +4,7 @@
       }
 
       #pruebaNaranjito{
+        text-align: center;
         color: white;
         background-color: #F88425;
         border-radius:15px;
@@ -82,28 +83,24 @@ header{
 
 }
 
-#sinSub:hover{
-     text-decoration:none;
+#listDesplegable{
+
 }
 
-
-#sinSub{
-     text-decoration:none;
-}
-a:hover{
-     text-decoration:none;
-}
-
-
-a{
-     text-decoration:none;
+#listDesplegable li a{
+  text-align: center;
+  color: white;
+  background-color: #F88425;
+  text-decoration: none;
+  display:block;
 }
 
-h4:hover{
-     text-decoration:none;
+#listDesplegable li a:hover{
+  text-align: center;
+  color:#F88425;
+  background-color: white;
+  text-decoration: none;
 }
-
-
-h4{
-     text-decoration:none;
+#listaDesplegable > li{
+  float:left;
 }

@@ -33,17 +33,17 @@
 		}
 	?>
     <!-- Page Content -->
-  <?php 
-    session_start();
-    if(isset($_SESSION['login']) == false)
-        require 'header_NL-I.php';
-    else{
-        if($_SESSION['login']==1){
-            require 'header_SL-I.php';
-        }
-        if($_SESSION['login']==false)
-            require 'header_NL-I.php';
-    }
+<?php
+    session_start(); 
+	if(isset($_SESSION['login']) == false)
+		require 'header_NL-B.php';
+	else{
+		if($_SESSION['login']==true)
+			require 'header_SL-B.php';
+		if($_SESSION['login']==false)
+			require 'header_NL-B.php';
+	}
+
 ?>
 
       <!-- Portfolio Item Row -->
