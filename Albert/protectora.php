@@ -17,30 +17,32 @@
 		$servidor = "localhost";
 		$basededades = "pethome";
 		
-		//if($_POST){
+		if($_POST){
 			$connexio = mysqli_connect( $servidor, $usuari, "" ) or die ("No s'ha pogut connectar amb el servidor de la base de dades");
 			$db = mysqli_select_db( $connexio, $basededades ) or die ( "Ups! Sembla que no és possible coonectar amb la base de dades" );
-			//$email = $_POST('email');
+			$id = $_POST('id');
 			//$nif = $_POST('NIF');
 			$email = "animales@gmail.com";
 			$NIF = "L87654392";
-		$consulta = "SELECT * FROM protectora WHERE email LIKE '".$email."' AND NIF LIKE '".$NIF."';";
+		$consulta = "SELECT * FROM protectora WHERE idProtectora=".$id;
 		$nombrePerrera = mysqli_query($connexio, $consulta) or die("Hi ha algun error en la consulta!");
 		$row = $nombrePerrera->fetch_object();
-		//}
-		//else{
+		}
+		else{
 			//echo "Ups sembla que la pagina que volies no es troba disponible!";
-		//}
+		}
 	?>
     <!-- Page Content -->
-    <div class="container">
-
-      <!-- Page Heading/Breadcrumbs -->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
-        </li>
-      </ol>
+  <?php 
+    if(isset($_SESSION['login']) == false)
+        require 'header_NL-I.php';
+    else{
+        if($_SESSION['login']==true)
+            require 'header_SL-I.php';
+        if($_SESSION['login']==false)
+            require 'header_NL-I.php';
+    }
+	?>
 
       <!-- Portfolio Item Row -->
       <div class="row">
@@ -79,7 +81,7 @@
 				<?php echo "<img class='perfilRefugio' src=".$row->imagen_contacto." alt=''>";?>
 					Persona de contacto </br>
 					<b><?php echo $row->nombre_contacto." ".$row->apellido_contacto; ?></b>	
-					<button class="naranjito">
+					<button class="naranjito" onClick="./persona.php?<?php echo $row->nombre_contacto."+".$row->apellido_contacto;?>">
 						Contacta con <?php echo $row->nombre_contacto; ?>
 					</button>
 				</div>
@@ -106,6 +108,16 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Footer -->
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
   </body>
 
+	<?php require 'footer.php';
+	?>
+  </body>
+	
 </html>
