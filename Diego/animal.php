@@ -1,10 +1,11 @@
 
 		<?php
+		function modalAnimal($id){
 			$servername = "localhost";
 			$username = "root";
 			$password = "1234";
 			$dbname = "pethome";
-			$id = $_GET['id'];
+			
 			$conn = new mysqli($servername, $username, $password, $dbname);
 								
 			if ($conn->connect_error) {
@@ -43,8 +44,7 @@
 			  
 				echo "
 				    <div class=\"contenedor\">
-					<a href=\"#openmodal\" class=\"open\">Abrir Ventana</a>
-					<section id=\"openmodal\" class=\"modalDialog\">
+					<section id=\"openmodal".$id."\" class=\"modalDialog\">
 					<section class=\"modal\">
 					<a href=\"#close\" class=\"close\"> X </a>
 					   	 <section class='modal-item uno'>
@@ -151,5 +151,7 @@
 		}
 
 		$conn->close();
+		}
+
 	?>
 
