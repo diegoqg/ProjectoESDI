@@ -14,6 +14,7 @@
 	//Coger todas las mascotas
 	$sql = "SELECT * FROM mascota";
 	$result = mysqli_query($conn, $sql);
+	$resultModal = mysqli_query($conn, $sql);
 	$cont = 0;
 
 	//Saber el numero de mascotas
@@ -37,6 +38,12 @@
 	$urgente = "urgente";
 
 	if ($num_filas > 0) {
+		//Modales
+		while ($lineModal = mysqli_fetch_array($resultModal)){
+			$animalModal = "animal.php?id=".$lineModal[$idMascota];
+			include $animalModal;
+		} 
+
 		while ($line = mysqli_fetch_array($result)) {
 		    if($cont == 0){
 		    echo "<div class=container>
@@ -72,7 +79,7 @@
 			}
 			if(strcmp($line[$urgente],"Si")==0)
 				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem;>
-		          <a href=animal.php?id=".$line[$idMascota]."#openmodal>
+		          <a href=#openmodal".$line[$idMascota].">
 		          	<img class=card-img-top src=".$line[$imagenPerfil]." alt=Card image cap>
 		          </a>
 		          <p><b>¡URGENTE!</b></p> 
@@ -88,7 +95,7 @@
 
 		    else
 				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem; onclick=frankmodal(".$line[$idMascota].")>
-		          <a href=animal.php?id=".$line[$idMascota]."#openmodal>
+		          <a href=#openmodal".$line[$idMascota].">
 		          	<img class=card-img-top src=".$line[$imagenPerfil]." alt=Card image cap>
 		          </a>
 		          <div class=card-block>
