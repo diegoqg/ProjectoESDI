@@ -133,8 +133,10 @@
 		    }
 		    //Diferencia si es urgente o no para poder printearlo
 		    if(strcmp($row[$urgMascota],"Si")==0)
-				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem; onclick=frankmodal(".$row[$idMascota].")>
-		          <img class=card-img-top src=".$row[$imgPerfilMascota]." alt=Card image cap>
+				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem;>
+		          <a href=animal.php?id=".$row[$idMascota]."#openmodal>
+		          	<img class=card-img-top src=".$row[$imgPerfilMascota]." alt=Card image cap>
+		          </a>
 		          <p><b>¡URGENTE!</b></p> 
 		          <div class=card-block>
 		            <h4 class=card-title style=color:#F88425;>".$row[$nombreMascota]."</h4>
@@ -147,8 +149,10 @@
 		        </div>";
 
 		    else
-				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem; onclick=frankmodal(".$row[$idMascota].")>
-		          <img class=card-img-top src=".$row[$imgPerfilMascota]." alt=Card image cap>
+				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem;>
+		          <a href=animal.php?id=".$row[$idMascota]."#openmodal>
+		          	<img class=card-img-top src=".$row[$imgPerfilMascota]." alt=Card image cap>
+		          </a>
 		          <div class=card-block>
 		            <h4 class=card-title style=color:#F88425;>".$row[$nombreMascota]."</h4>
 		            <p class=card-text><img src=images/ubicacion.png width=25px height=25px alt=iconoUbicacion> <b>".$row[$nombreComunidad]."</b></br>
