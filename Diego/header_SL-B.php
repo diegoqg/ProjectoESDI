@@ -28,6 +28,9 @@
 	<link rel="stylesheet" type="text/css" href="css/cssPau.css" title="Color" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	
+	<!--CSS frankin-->
+	<link rel="stylesheet" href="css/estilos.css">
+
   </head>
   <body>
     <header>
