@@ -48,23 +48,23 @@
       <div class="row">
 
      <div class="col-md-7">
-		<h3 class=""><?php 
+		<h3 class="clase1"><?php 
 		echo "<img class='icon' src='".$row->imagen_protectora."' alt='error' width='100' height='100'> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp";
 			echo $row->nombre . " "; 
 			
 			?></h3>
-	 <div class="datos">
-		<p class="textborder">
+	 <div class="datos1">
+		<p class="textborder1">
 		
 			<img class="icon" src="/imagenes/telefono.jpg" alt="" width="15" height="15" > &nbsp &nbsp <?php echo $row->telefono; ?>
 			<br><img class="icon" src="/imagenes/position.png" alt="" width="15" height="15" > &nbsp &nbsp <?php echo $row->direccion; ?>
 			<br><img class="icon" src="/imagenes/reloj.png" alt="" width="15" height="15" > &nbsp &nbsp <?php echo $row->horario; ?>
 		</p>
 	</div>
-		<p class="textsample"><b>Nuestra historia</b></br>
+		<p class="textsample1"><b>Nuestra historia</b></br>
 		<?php echo $row->historia; ?>
 		</p>
-		<p class="textsample"><b>Nuestro equipo</b></br>
+		<p class="textsample1"><b>Nuestro equipo</b></br>
 		<?php echo $row->equipo; ?>
 		</p>
 	 </div>
@@ -78,11 +78,11 @@
 			</br>
 			
 				
-				<div class="encuadrado">
-				<?php echo "<img class='perfilRefugio' src=".$row->imagen_contacto." alt=''>";?>
+				<div class="encuadrado1">
+				<?php echo "<img class='perfilRefugio1' src=".$row->imagen_contacto." alt=''>";?>
 					Persona de contacto </br>
 					<b><?php echo $row->nombre_contacto." ".$row->apellido_contacto; ?></b>	
-					<button class="naranjito" onClick="./persona.php?<?php echo $row->nombre_contacto."+".$row->apellido_contacto;?>">
+					<button class="naranjito1" onClick="./persona.php?<?php echo $row->nombre_contacto."+".$row->apellido_contacto;?>">
 						Contacta con <?php echo $row->nombre_contacto; ?>
 					</button>
 				</div>
