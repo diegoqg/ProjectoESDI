@@ -82,7 +82,7 @@
 				<?php echo "<img class='perfilRefugio' src=".$row->imagen_contacto." alt=''>";?>
 					Persona de contacto </br>
 					<b><?php echo $row->nombre_contacto." ".$row->apellido_contacto; ?></b>	
-					<button class="naranjito" onClick="./persona.php?<?php echo $row->nombre_contacto."+".$row->apellido_contacto;?>">
+					<button class="naranjito" onClick="./mensajes.php">
 						Contacta con <?php echo $row->nombre_contacto; ?>
 					</button>
 				</div>
