@@ -3,9 +3,9 @@
 	if(isset($_SESSION['login']) == false)
 		require 'header_NL-B.php';
 	else{
-		if($_SESSION['login']==true)
+		if($_SESSION['login']==1)
 			require 'header_SL-B.php';
-		if($_SESSION['login']==false)
+		if($_SESSION['login']==0)
 			require 'header_NL-B.php';
 	}
 

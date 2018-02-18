@@ -20,7 +20,14 @@
     <link rel="stylesheet" href="css/estiloMurciano.css">	
     <script src="js/murciscript.js"></script>
 
-    <link rel="stylesheet" href="css/borderAlbert.css">  
+    <!--CSS y cosas Albert-->
+	<link rel="stylesheet" href="css/borderAlbert.css">  
+
+	<!--CSS y cosas Pau-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/cssPau.css" title="Color" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
   </head>
   <body>
     <header>

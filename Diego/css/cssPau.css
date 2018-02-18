@@ -1,0 +1,277 @@
+html{
+	font-family: sans-serif;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent;
+	min-width:300px;
+}
+div.active {
+    background: rgb(184, 225, 252);    
+}
+
+div.PBbandejaMensajesFuera {
+	border: solid 2px;
+	border-radius:9%;
+	border-color:#B8B8B8;
+	margin-left:5%;
+	margin-top:10%;
+	float:left;
+	width:15%;
+}
+.PBmensajeFueraDIV{
+	float:right;
+	width:65%;
+}
+p.PBmensajeNombrePerroFuera{
+	color:orange;
+	font-size:88%;
+	margin-top:25px;
+}
+p.PBmensajeRazaPerroFuera{
+	font-size:88%;
+	margin-top:-15px;
+}
+p.PBmensajeFuera{
+	color:grey;
+	font-size:68%;
+	margin-top:-10px;
+}
+
+img.PBimagenMensajeFuera{
+	margin-left:10%;
+	margin-top:8%;
+	margin-bottom:8%;
+	float:left;
+	border-radius: 20%;
+}
+
+hr{
+	clear:both;
+	height:1.5px;
+	background-color:#B8B8B8;
+}
+
+div.PBmensajeVentana{
+	height:580px;
+	border: solid 2px;
+	border-radius: 14px 14px 14px 14px;
+	border-color:#B8B8B8;
+	margin-left:2%;
+	margin-top:10%;
+	float:left;
+	width:50%;
+}
+img.PBimagenVisitanteVentana{
+	margin-left:4%;
+	margin-top:2%;
+	margin-bottom:2%;
+	float:left;
+	border-radius: 50%;
+}
+div.PBdivVentana{
+	float:right;
+	width:86%;
+}
+p.PBmensajeNombreLocal{
+	color:orange;
+	margin-top:25px;
+}
+p.PBmensajeNombreVisitante{
+	margin-top:-15px;
+}
+
+div.PBmensajeLocal{
+	border: solid 1px #B8B8B8;
+	margin-top:2%;
+	border-radius: 14px 14px 14px 14px;
+	margin-left:4%;
+	background:#D3D3D3;
+	float:left;
+	width:80%;
+	margin-bottom:1.5%;
+}
+img.PBimagenLocal{
+	float:right;
+	margin-top:2%;
+	margin-left:4%;
+	margin-right:2%;
+	border-radius: 50%;
+}
+div.PBmensajeLocal p.PBmensajeTexto{
+	margin-left:4%;
+}
+div.PBmensajeLocal p.PBmensajeFecha{
+	margin-top:-12px;
+	margin-left:4%;
+	color:grey;
+	font-size:75%;
+}
+div.PBmensajeVisitante{
+	border: solid 1px #B8B8B8;
+	margin-top:2%;
+	border-radius: 14px 14px 14px 14px;
+	margin-left:2%;
+	margin-right:4%;
+	float:right;
+	width:80%;
+	margin-bottom:1.5%;
+}
+img.PBimagenVisitante{
+	float:left;
+	margin-top:2%;
+	margin-left:4%;
+	border-radius: 50%;
+}
+div.PBmensajeVisitante p.PBmensajeTexto{
+	margin-left:4%;
+}
+div.PBmensajeVisitante p.PBmensajeFecha{
+	margin-top:-12px;
+	margin-left:4%;
+	color:grey;
+	font-size:75%;
+}
+.PBtextoEnviar{
+	width:60%;
+	margin-left:4%;
+	border: 1px solid #B8B8B8;
+	border-radius: 14px 14px 14px 14px;
+	padding-top:15px;
+	padding-left:2%;
+	margin-top:2%;
+	margin-bottom:4%;
+	float:left;
+	resize:none;
+}
+.PBboton{
+	background-color:#F88425;
+	float:right;
+	margin-top:2%;
+	color:white;
+	padding:2%;
+	border-radius: 14px 14px 14px 14px;
+	margin-right:4%;
+}
+.PBtxt{
+	border: 1px solid #B8B8B8;
+	border-radius: 14px 14px 14px 14px;
+}
+.PBmensajes{
+	padding:2%;
+	height:350px;
+	overflow-y: scroll;
+}
+.PBimagenPerroGeneral{
+	width:300px; 
+	float:left; 
+	margin-left:2%;
+	margin-top:10%;
+}
+
+@media screen and (min-width:2035px) {
+	div.PBmensajeVentana{
+		height:600px;
+	}
+	div.PBbandejaMensajesFuera{
+		margin-left:auto;
+	}
+}
+
+@media screen and (max-width:1500px) {
+	div.PBmensajeFueraDIV{
+		width:60%;
+	}
+	div.PBmensajeVentana{
+		width:50%;
+		height:560px;
+	}
+	
+}
+
+@media screen and (max-width:1250px) {
+	div.PBmensajeVentana{
+		height:550px;
+	}
+	div.PBmensajeFueraDIV{
+		margin-top:-10px;
+		width:50%;
+	}
+	div.PBmensajeLocal{
+		width:70%;
+	}
+	div.PBmensajeVisitante{
+		width:70%;
+	}
+	div.PBimagenPerroGeneral{
+		margin-top:2%;
+		clear:both
+	}
+}
+
+@media screen and (max-width:1135px) {
+	div.PBmensajeFueraDIV{
+		margin-top:10px;
+		width:70%;
+	}
+	div.PBmensajeVentana{
+		clear:both;
+		margin-top:40px;
+		margin-bottom:40px;
+	}
+	div.PBbandejaMensajesFuera{
+		width:40%;
+	}
+	div.PBdivVentana{
+		width:77%;
+	}
+}
+
+@media screen and (max-width:800px) {
+	img.PBimagenMensajeFuera{
+		margin-bottom:2%;
+		margin-left:15%;
+		margin-top:3%;
+	}
+	p.PBmensajeNombrePerroFuera{
+		color:orange;
+		font-size:100%;
+	}
+	p.PBmensajeRazaPerroFuera{
+		font-size:100%;
+		margin-top:-15px;
+	}
+	p.PBmensajeFuera{
+		color:grey;
+		font-size:80%;
+		margin-top:-10px;
+	}
+	div.PBimagenPerroGeneral{
+		clear:both;
+		margin-top:3%;
+		margin-left:10%;
+	}
+	div.PBmensajeFueraDIV{
+		margin-top:0px;
+		width:70%;
+	}
+	div.PBbandejaMensajesFuera{
+		margin-left:10%;
+		width:80%;
+	}
+	div.PBmensajeVentana{
+		margin-top:5%;
+		margin-left:10%;
+		margin-bottom:0%;
+		width:80%;
+		height:540px;
+		
+	}
+}
+@media screen and (max-width:400px) {
+	div.PBmensajeFueraDIV{
+		margin-top:0px;
+	}
+}
+
