@@ -7,7 +7,7 @@ Example URL : http://www.sanwebe.com/2013/03/ajax-pagination-with-jquery-php */
 	//get total number of records from database for pagination
 	$servername = "localhost";
 	$username = "root";
-	$password = "";
+	$password = "1234";
 	$dbname = "pethome";
 	$conn = new mysqli($servername, $username, $password, $dbname);
 						
@@ -21,7 +21,7 @@ Example URL : http://www.sanwebe.com/2013/03/ajax-pagination-with-jquery-php */
 	$result = mysqli_query($conn, $sql);
 	$cont = 0;
 	//Saber el numero de mascotas
-	$sql2 = "SELECT COUNT(*) FROM mascota";
+	$sql2 = "SELECT COUNT(*) FROM mascota WHERE idProtectora=".$id;
 	$result2 = mysqli_query($conn, $sql2);
 	$contSQL = mysqli_fetch_row($result2);
 	$num_filas = $contSQL[0];
@@ -100,6 +100,15 @@ Example URL : http://www.sanwebe.com/2013/03/ajax-pagination-with-jquery-php */
 		    $num_filas--;
 		}
 	}
+	/* We call the pagination function here to generate Pagination link for us. 
+	As you can see I have passed several parameters to the function. */
+
+	
+	
+	
+
+################ pagination function #########################################
 
 
 ?>
+
