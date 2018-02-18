@@ -86,7 +86,7 @@
 					</br>
 					</br>
 					</br>
-					<a class="naranjito" href="./mensajes.php">
+					<a class="naranjito" href="./mensajes.php" style=color:white;>
 						Contacta con <?php echo $row->nombre_contacto; ?>
 					</a>
 				</div>

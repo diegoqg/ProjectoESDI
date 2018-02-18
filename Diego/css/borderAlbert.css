@@ -50,6 +50,11 @@ img.perfilRefugio{
 	padding-left:15%;
 	padding-right:15%;
 	position:relative;
+	color: white;
+}
+
+.naranjito:hover{
+	color: white;
 }
 .pagination{
 	padding-left:35%;

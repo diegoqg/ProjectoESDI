@@ -67,11 +67,13 @@ Example URL : http://www.sanwebe.com/2013/03/ajax-pagination-with-jquery-php */
 				$razaPerro = $line2[$nombre];
 			}
 			if(strcmp($line[$urgente],"Si")==0)
-				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem; onclick=frankmodal(".$line[$idMascota].")>
-		          <img class=card-img-top src=".$line[$imagenPerfil]." alt=Card image cap>
+				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem;>
+		          <a href=#openmodal".$line[$idMascota].">
+		          	<img class=card-img-top src=".$line[$imagenPerfil]." alt=Card image cap>
+		          </a>
 		          <p><b>¡URGENTE!</b></p> 
 		          <div class=card-block>
-		            <h4 class=card-title style=color:#F88425;>".$line[$nombre]."</h4>
+		          <h4 class=card-title style=color:#F88425;>".$line[$nombre]."</h4>
 		            <p class=card-text><img src=images/ubicacion.png width=25px height=25px alt=iconoUbicacion> <b>".$comunidadProtectora."</b></br>
 		            ".$line[$edad]." ".$line[$unidadEdad]." · ".$line[$sexo]." · ".$line[$tamaño]." · ".$razaPerro."</br>
 		            <a href=protectora.php?id=".$line[$idProtectora].">
@@ -79,11 +81,14 @@ Example URL : http://www.sanwebe.com/2013/03/ajax-pagination-with-jquery-php */
                 </a>
 		          </div>
 		        </div>";
+
 		    else
-				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem; onclick=frankmodal(".$line[$idMascota].")>
-		          <img class=card-img-top src=".$line[$imagenPerfil]." alt=Card image cap>
+				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem;>
+		          <a href=#openmodal".$line[$idMascota].">
+		          	<img class=card-img-top src=".$line[$imagenPerfil]." alt=Card image cap>
+		          </a>
 		          <div class=card-block>
-		            <h4 class=card-title style=color:#F88425;>".$line[$nombre]."</h4>
+		          <h4 class=card-title style=color:#F88425;>".$line[$nombre]."</u></h4>
 		            <p class=card-text><img src=images/ubicacion.png width=25px height=25px alt=iconoUbicacion> <b>".$comunidadProtectora."</b></br>
 		            ".$line[$edad]." ".$line[$unidadEdad]." · ".$line[$sexo]." · ".$line[$tamaño]." · ".$razaPerro."</br>
                 <a href=protectora.php?id=".$line[$idProtectora].">
