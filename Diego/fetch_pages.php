@@ -19,6 +19,7 @@ Example URL : http://www.sanwebe.com/2013/03/ajax-pagination-with-jquery-php */
 	//Coger todas las mascotas
 	$sql = "SELECT * FROM mascota";
 	$result = mysqli_query($conn, $sql);
+	$resultModal = mysqli_query($conn, $sql);
 	$cont = 0;
 	//Saber el numero de mascotas
 	$sql2 = "SELECT COUNT(*) FROM mascota WHERE idProtectora=".$id;
@@ -38,6 +39,13 @@ Example URL : http://www.sanwebe.com/2013/03/ajax-pagination-with-jquery-php */
 	$raza = "raza";
 	$urgente = "urgente";
 	if ($num_filas > 0) {
+
+		$animalModal = "animal.php";
+		include $animalModal;
+		while ($lineModal = mysqli_fetch_array($resultModal)){
+			modalAnimal($lineModal[$idMascota]);
+		} 
+		
 		while ($line = mysqli_fetch_array($result)) {
 		    if($cont == 0){
 		    echo "<div class=container>

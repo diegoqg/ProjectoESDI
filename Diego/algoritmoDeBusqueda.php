@@ -67,6 +67,7 @@
 	}
 	
 	$result = mysqli_query($conn, $sql); //Ejecución de la consulta final
+	$resultModal = mysqli_query($conn, $sql);
 	$numFilas = 0;
 
 	$resultCount = mysqli_query($conn, $sqlCount); //
@@ -109,6 +110,11 @@
 		echo "<h1 id=titleNaranjito> No se han encontrado animales con estas caracteristicas</h1>";
 
 	if ($result->num_rows > 0) {
+		$animalModal = "animal.php";
+		include $animalModal;
+		while ($lineModal = mysqli_fetch_array($resultModal)){
+			modalAnimal($lineModal[$idMascota]);
+		} 
 		while($row = $result->fetch_assoc()) {
 			/*
 			Código para representar visualmente los perros que devuelve la consulta
