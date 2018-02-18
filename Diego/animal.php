@@ -46,7 +46,7 @@
 				    <div class=\"contenedor\">
 					<section id=\"openmodal".$id."\" class=\"modalDialog\">
 					<section class=\"modal\">
-					<a href=\"#close\" class=\"close\" onclick=\"mostraLogin1(1,2)\"> X </a>
+					<a href=\"#close".$id."\" class=\"close\" onclick=\"mostraLogin1(1,2)\"> X </a>
 					   	 <section class='modal-item uno'>
 						  	<div class=\"titulo\">
 						   		<h2>".$line[$nombreMascota]."</h2>
