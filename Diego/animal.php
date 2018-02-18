@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<title>Ventana modal</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="estilos.css">
-	</head>
-	<body>
-		<div class="contenedor">
-			<!--<a href="#openmodal" class="open">Abrir Ventana</a>-->
-			<section id="openmodal" class="modalDialog">
-			<section class="modal">
-			<a href="#close" class="close"> X </a>
+
 		<?php
 			$servername = "localhost";
 			$username = "root";
@@ -55,6 +42,11 @@
 			while ($line = mysqli_fetch_array($result) ) {
 			  
 			    echo "
+			    <div class=\"contenedor\">
+				<!--<a href=\"#openmodal\" class=\"open\">Abrir Ventana</a>-->
+				<section id=\"openmodal\" class=\"modalDialog\">
+				<section class=\"modal\">
+				<a href=\"#close\" class=\"close\"> X </a>
 			   	 <section class='modal-item uno'>
 					  	<div class=\"titulo\">
 					   		<h2>".$line[$nombreMascota]."</h2>
@@ -112,22 +104,7 @@
 							  <span class=\"dot\" onclick=\"currentSlide(2)\"></span> 
 							  <span class=\"dot\" onclick=\"currentSlide(3)\"></span> 
 							</div>
-						</section>	 
-		         ";
-			    
-				  
-
-			    $num_filas--;
-			
-			}
-		}
-
-		$conn->close();
-	?>
-		
-				
-					   
-					
+						</section>
 
 							<script>
 							var slideIndex = 1;
@@ -143,18 +120,18 @@
 
 							function showSlides(n) {
 							  var i;
-							  var slides = document.getElementsByClassName("mySlides");
-							  var dots = document.getElementsByClassName("dot");
+							  var slides = document.getElementsByClassName(\"mySlides\");
+							  var dots = document.getElementsByClassName(\"dot\");
 							  if (n > slides.length) {slideIndex = 1}    
 							  if (n < 1) {slideIndex = slides.length}
 							  for (i = 0; i < slides.length; i++) {
-							      slides[i].style.display = "none";  
+							      slides[i].style.display = \"none\";  
 							  }
 							  for (i = 0; i < dots.length; i++) {
-							      dots[i].className = dots[i].className.replace(" active", "");
+							      dots[i].className = dots[i].className.replace(\" active\", "");
 							  }
-							  slides[slideIndex-1].style.display = "block";  
-							  dots[slideIndex-1].className += " active";
+							  slides[slideIndex-1].style.display = \"block\";  
+							  dots[slideIndex-1].className += \"active\";
 							}
 							</script>
 					 		
@@ -164,7 +141,16 @@
 				</div>
 				</section>
 			</section>
-		</div>
+		</div>	 
+		         ";
+			    
+				  
 
-	</body>
-</html>
+			    $num_filas--;
+			
+			}
+		}
+
+		$conn->close();
+	?>
+		
