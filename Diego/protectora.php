@@ -81,7 +81,11 @@
 				<div class="encuadrado">
 				<?php echo "<img class='perfilRefugio' src=".$row->imagen_contacto." alt=''>";?>
 					Persona de contacto </br>
-					<b><?php echo $row->nombre_contacto." ".$row->apellido_contacto; ?></b>	
+					<b><?php echo $row->nombre_contacto." ".$row->apellido_contacto; ?></br>	
+					</br>
+					</br>
+					</br>
+					</br>
 					<a class="naranjito" href="./mensajes.php">
 						Contacta con <?php echo $row->nombre_contacto; ?>
 					</a>
