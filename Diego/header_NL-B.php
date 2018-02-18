@@ -21,10 +21,8 @@
     <script src="js/murciscript.js"></script>
 
     <!--CSS y cosas Albert-->
-	<link rel="stylesheet" href="css/borderAlbert.css">  
+	<link rel="stylesheet" href="css/borderAlbert.css"> 
 	<link rel="stylesheet" href="css/modern-business.css">
-    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.bootpag.min.js"></script>
 
 	<!--CSS y cosas Pau-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">

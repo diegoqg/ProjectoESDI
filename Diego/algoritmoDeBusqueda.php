@@ -134,7 +134,7 @@
 		    //Diferencia si es urgente o no para poder printearlo
 		    if(strcmp($row[$urgMascota],"Si")==0)
 				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem;>
-		          <a href=animal.php?id=".$row[$idMascota]."#openmodal>
+		          <a href=animal.php?id=".$row[$idMascota]."#openmodal>s
 		          	<img class=card-img-top src=".$row[$imgPerfilMascota]." alt=Card image cap>
 		          </a>
 		          <p><b>¡URGENTE!</b></p> 
