@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<title>Ventana modal</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="estilos.css">
-	</head>
-	<body>
-		
+	
 		<?php
 			function modalAnimal($id){
 				$servername = "localhost";
@@ -49,8 +40,7 @@
 			$imagen2 = "imagen2";
 			if ($num_filas > 0) {
 			while ($line = mysqli_fetch_array($result) ) {
-			  
-<<<<<<< HEAD
+
 				echo "
 				    <div class=\"contenedor\">
 					<a href=\"#openmodal\" class=\"open\">Abrir Ventana</a>
@@ -59,8 +49,8 @@
 					<a href=\"#close\" class=\"close\"> X </a>
 					   	 <section class='modal-item uno'>
 						  	<div class=\"titulo\">
-						   		<h2>".$line[$nombreMascota]."</h2>
-=======
+						   		<h2>".$line[$nombreMascota]."</h2>";
+
 			    echo "
 			    <div class=\"contenedor\">
 				<!--<a href=\"#openmodal\" class=\"open\">Abrir Ventana</a>-->
@@ -98,8 +88,7 @@
 							<div class=\"mySlides fade\">
 							  <div class=\"numbertext\">1 / 3</div>
 							  <img src=".$line[$imagenPerfil]." style=\"width:100%\">
-							
->>>>>>> b42280ed06c1411b3a01983a2ac887d9e9300866
+
 							</div>
 							<div class=\"ubicacion\">
 								<p><img src=\"\images\ubicación.png\">".$line[$direccion]."</p>
@@ -125,7 +114,6 @@
 						  <section class=\"imagen\">
 						  	<div class=\"slideshow-container\">
 
-<<<<<<< HEAD
 								<div class=\"mySlides fade\">
 								  <div class=\"numbertext\">1 / 3</div>
 								  <img src=".$line[$imagenPerfil]." style=\"width:100%\">
@@ -191,7 +179,6 @@
 						</section>
 						</section>
 					</section> 
-=======
 							<script>
                                 var slideIndex = 1;
                                 showSlides(slideIndex);
@@ -224,7 +211,6 @@
 					 	
 					</section>
 					</section>
->>>>>>> b42280ed06c1411b3a01983a2ac887d9e9300866
 				</div>
 			";
 			    
@@ -239,6 +225,3 @@
 			}
 			
 	?>
-
-	</body>
-</html>
