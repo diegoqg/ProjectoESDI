@@ -39,9 +39,10 @@
 
 	if ($num_filas > 0) {
 		//Modales
+		$animalModal = "animal.php";
+		include $animalModal;
 		while ($lineModal = mysqli_fetch_array($resultModal)){
-			$animalModal = "animal.php?id=".$lineModal[$idMascota];
-			include $animalModal;
+			modalAnimal($lineModal[$idMascota]);
 		} 
 
 		while ($line = mysqli_fetch_array($result)) {
@@ -94,7 +95,7 @@
 		        </div>";
 
 		    else
-				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem; onclick=frankmodal(".$line[$idMascota].")>
+				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem;>
 		          <a href=#openmodal".$line[$idMascota].">
 		          	<img class=card-img-top src=".$line[$imagenPerfil]." alt=Card image cap>
 		          </a>
