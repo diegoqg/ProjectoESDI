@@ -15,7 +15,7 @@ if(isset($_POST["nombrePerro"])){
 			
 		$conn->set_charset("utf8");
 		
-		$tipo="usuari";//$_SESSION['tipo'];
+		$tipo=$_SESSION['tipo'];
 		$id=1;
 		$idVisitante="idUsuario";
 		$flag=0;
@@ -95,7 +95,7 @@ if(isset($_POST["nombrePerro"])){
 					}
 					$contSQL=$contSQL-1;
 				}
-				if($tipo=="usuari"){
+				if($tipo=="usuario"){
 					
 					if($flag==0){
 						$sql3 = "SELECT * FROM protectora WHERE idProtectora=".$line[$idVisitante]." LIMIT 1";

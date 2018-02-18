@@ -33,29 +33,6 @@
 					$('.PBmensajeVentana').append(respuesta);
 				});
 			});
-			
-			
-			/*
-			var fecha = new Date();
-			var dia = fecha.getDate();
-			var mes = fecha.getMonth();
-			var año = fecha.getFullYear();
-			
-			if(dia<10){
-				dia='0'+dia
-			}
-			
-			var txt = document.getElementById('PBtextoEnviar').value;
-			
-			var meses = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
-			if(txt==""){
-			}else{
-				$('.PBmensajes').append('<div class="PBmensajeLocal"><p class="PBmensajeTexto">'+txt+'</p><p class="PBmensajeFecha"> '+dia+' de '+meses[mes]+'. de '+año+'</p></div>');
-				$('.PBmensajes').append('<img class="PBimagenLocal" src="imagenes/persona1.jpg" alt="fotoPersona" height="55" width="55">');
-				
-				actualizarDiv();
-				$('.PBtextoEnviar').val('');
-			}*/
 		}
 		<!--Scroll del panell de missatges-->
 		function actualizarDiv(){

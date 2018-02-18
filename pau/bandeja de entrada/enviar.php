@@ -1,10 +1,9 @@
 <?php
-	$HolaMundo=1;
 	if(isset($_POST["nombrePerro"],$_POST["idvis"],$_POST["mensaje"])){
 		if($_POST["nombrePerro"]&&$_POST["idvis"]&&$_POST["mensaje"]){
 			session_start();
-			$id = 1;//$_SESSION['id'];
-			$tipo = "usuario"; //$_SESSION['tipo'];
+			$id = $_SESSION['id'];
+			$tipo = $_SESSION['tipo'];
 			$propietario=0;
 			$idMascota=0;
 			
