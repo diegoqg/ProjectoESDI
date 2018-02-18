@@ -91,9 +91,6 @@ ALTER TABLE usuario
 
 ALTER TABLE protectora
 	ADD CONSTRAINT FK_PROTECTORA_COMUNIDAD FOREIGN KEY (comunidad) REFERENCES comunidades (idComunidad);
-
-	
-
 	
 	
 INSERT INTO raza (especie,nombre) VALUES
