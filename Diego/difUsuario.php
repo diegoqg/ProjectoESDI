@@ -40,7 +40,7 @@
 		$result =  mysqli_query($conn, $sql);
 		if ($result->num_rows > 0){	
 			$registro = $result->fetch_object();
-			$img = $registro->imagen_protectora;
+			$img = $registro->imagen;
 			echo "<div class=dropdown style=background-color:white;>
 				   <button class=btn btn-secondary dropdown-toggle type=button id=dropdownMenu2 data-toggle=dropdown aria-haspopup=true aria-expanded=false>
     					<img src=".$img." class=imgRedonda>
