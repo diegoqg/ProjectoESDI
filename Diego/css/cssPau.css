@@ -10,6 +10,12 @@ html{
 div.active {
     background: rgb(184, 225, 252);    
 }
+body{
+	height:80%;
+}
+footer{
+	margin-top:55%;
+}
 
 div.PBbandejaMensajesFuera {
 	border: solid 2px;

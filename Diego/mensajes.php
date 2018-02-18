@@ -25,7 +25,6 @@
 				$.post("infoPerro.php",{"nombrePerro":perro.id},function(respuesta){
 					$('.PBimagenPerroGeneral').append(respuesta);
 				});
-				window.scrollTo(100,document.body.contenido.PBmensajeVentana.scrollHeight);
 			}
 		}
 		function enviar(vis){
@@ -49,9 +48,9 @@
 		<!-- panell dels diferents missatges -->
 		<div class="contenido">
 			<?php
-				include './ventana.php';
-				include './infoPerro.php';
-				include './enviar.php';
+				include 'ventana.php';
+				include 'infoPerro.php';
+				include 'enviar.php';
 			
 				$servername = "localhost";
 				$username = "root";
@@ -105,6 +104,7 @@
 											
 											
 											while($line4 = mysqli_fetch_array($result4)){
+												
 													echo "	<div id=".$line2[$nombre]." class=PBmensajeFueraDIV onclick=verMensaje(this)>
 																<p class=PBmensajeNombrePerroFuera> ".$line2[$nombre]."</p>
 																<p class=PBmensajeRazaPerroFuera>".$line3[$nombre]."</p>
@@ -157,8 +157,8 @@
 		</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   --> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
   </body>
 
