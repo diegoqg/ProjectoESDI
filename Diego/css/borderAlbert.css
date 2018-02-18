@@ -1,8 +1,8 @@
 
-h3{
+h31{
 	color: #f88425;
 }
-.encuadrado{
+.encuadrado1{
 border-style: solid;
 border-width: 1px;
 border-color: grey;
@@ -15,27 +15,27 @@ margin-left:20px;
 flex:1;
 
 }
-.textsample{
+.textsample1{
 margin-left: 30px;
 border-bottom: 1px solid grey;
 }
-.textborder{
+.textborder1{
 padding-bottom: 15px;
 border-bottom: 1px solid grey;
 padding-left: 150px;
 }
-.datos{
+.datos1{
 line-height: 1.8;
 margin:30px;	
 }
-.perfilRefugio{
+.perfilRefugio1{
 	width: 70px;
 	height: 70px;
 	border-radius: 100px;	
 	float: right;
 	
 }
-.naranjito{
+.naranjito1{
 	background-color: #f88425;
 	border-radius: 10px;
 	text-align: center;
@@ -45,11 +45,6 @@ margin:30px;
 	padding-left:15%;
 	padding-right:15%;
 	position:relative;
-}
-.pagination{
-	padding-left:35%;
-	padding-right:35%;
-    margin:0 auto;
 }
 
 
