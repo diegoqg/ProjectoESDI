@@ -1,10 +1,10 @@
 
 		<?php
-			$servername = "localhost";
+			function modalAnimal($id){
+				$servername = "localhost";
 			$username = "root";
 			$password = "1234";
 			$dbname = "pethome";
-			$id = $_GET['id'];
 			$conn = new mysqli($servername, $username, $password, $dbname);
 								
 			if ($conn->connect_error) {
@@ -44,7 +44,7 @@
 			    echo "
 			    <div class=\"contenedor\">
 				<!--<a href=\"#openmodal\" class=\"open\">Abrir Ventana</a>-->
-				<section id=\"openmodal\" class=\"modalDialog\">
+				<section id=\"openmodal".$id."\" class=\"modalDialog\">
 				<section class=\"modal\">
 				<a href=\"#close\" class=\"close\"> X </a>
 			   	 <section class='modal-item uno'>
@@ -107,33 +107,33 @@
 						</section>
 
 							<script>
-							var slideIndex = 1;
-							showSlides(slideIndex);
+                                var slideIndex = 1;
+                                showSlides(slideIndex);
 
-							function plusSlides(n) {
-							  showSlides(slideIndex += n);
-							}
+                                function plusSlides(n) {
+                                  showSlides(slideIndex += n);
+                                }
 
-							function currentSlide(n) {
-							  showSlides(slideIndex = n);
-							}
+                                function currentSlide(n) {
+                                  showSlides(slideIndex = n);
+                                }
 
-							function showSlides(n) {
-							  var i;
-							  var slides = document.getElementsByClassName(\"mySlides\");
-							  var dots = document.getElementsByClassName(\"dot\");
-							  if (n > slides.length) {slideIndex = 1}    
-							  if (n < 1) {slideIndex = slides.length}
-							  for (i = 0; i < slides.length; i++) {
-							      slides[i].style.display = \"none\";  
-							  }
-							  for (i = 0; i < dots.length; i++) {
-							      dots[i].className = dots[i].className.replace(\" active\", "");
-							  }
-							  slides[slideIndex-1].style.display = \"block\";  
-							  dots[slideIndex-1].className += \"active\";
-							}
-							</script>
+                                function showSlides(n) {
+                                  var i;
+                                  var slides = document.getElementsByClassName('mySlides');
+                                  var dots = document.getElementsByClassName('dot');
+                                  if (n > slides.length) {slideIndex = 1}
+                                  if (n < 1) {slideIndex = slides.length}
+                                  for (i = 0; i < slides.length; i++) {
+                                      slides[i].style.display = 'none';
+                                  }
+                                  for (i = 0; i < dots.length; i++) {
+                                      dots[i].className = dots[i].className.replace('active', '' );
+                                  }
+                                  slides[slideIndex-1].style.display = \"block\";
+                                  dots[slideIndex-1].className += \" active\";
+                                }
+                                </script>
 					 		
 					 	
 					</section>
@@ -152,5 +152,7 @@
 		}
 
 		$conn->close();
+			}
+			
 	?>
 		
