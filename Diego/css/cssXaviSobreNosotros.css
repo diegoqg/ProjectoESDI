@@ -1,0 +1,48 @@
+body {
+	font-family: Raleway, Helvetica, sans-serif;
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+input[type=submit] {
+	background-color: #f88425;
+	color: white;
+	padding: 12px 235px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #c65c06;
+}
+
+.containerSobre {
+	border-radius: 5px;
+	padding-top: 100px;
+	padding-left: 200px;
+	padding-right: 1050px;
+}		
+
+.titolSobre {			
+	color: #f88425;
+	font-size: 40px;
+}
+
+.subtitolSobre {			
+	color: #737373;
+	font-size: 26px;
+}
+
+.textSobre {			
+	font-size: 18px;
+}

@@ -1,53 +1,18 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-			body {
-				font-family: Raleway, Helvetica, sans-serif;
-			}
+<?php
+    session_start(); 
+	if(isset($_SESSION['login']) == false)
+		require 'header_NL-B.php';
+	else{
+		if($_SESSION['login']==1)
+			require 'header_SL-B.php';
+		if($_SESSION['login']==0)
+			require 'header_NL-B.php';
+	}
 
-			input[type=text], select, textarea {
-				width: 100%;
-				padding: 12px;
-				border: 1px solid #ccc;
-				border-radius: 4px;
-				box-sizing: border-box;
-				margin-top: 6px;
-				margin-bottom: 16px;
-				resize: vertical;
-			}
-
-			input[type=submit] {
-				background-color: #f88425;
-				color: white;
-				padding: 12px 235px;
-				border: none;
-				border-radius: 2px;
-				cursor: pointer;
-			}
-
-			input[type=submit]:hover {
-				background-color: #c65c06;
-			}
-
-			.container {
-				border-radius: 5px;
-				padding-top: 100px;
-				padding-left: 200px;
-				padding-right: 1200px;
-			}		
-
-			.titol {			
-				color: #f88425;
-				font-size: 40px;
-			}
-		</style>
-	</head>
-	<body>
+?>
 		<div class="container">
-		<h3 class="titol">Si tienes cualquier duda,</h3>
-		<h3 class="titol">env&iacuteanos un mensaje</h3>
+			<h3 class="titol">Si tienes cualquier duda,</h3>
+			<h3 class="titol">env&iacuteanos un mensaje</h3>
 			<form action="/action_page.php">
 				<label for="fname"></label>
 				<input type="text" id="fname" name="firstname" placeholder="Nombre...">
@@ -61,6 +26,10 @@
 				<input type="submit" value="Enviar">
 			</form>
 		</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+  </body>
 
-	</body>
-</html>
+<?php require 'footer.php';
+?>
