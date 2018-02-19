@@ -58,6 +58,10 @@
 
 #reset{
 	margin-left: -3px;
+  margin-top: 5px;
+}
+.btn #lupa{
+    margin-top: 5px;
 }
 
 header{
