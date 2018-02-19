@@ -14,7 +14,7 @@
 								
 			$conn->set_charset("utf8");
 			//Coger todas las mascotas
-			$sql = "SELECT mascota.nombre AS nombreMascota, protectora.nombre, mascota.edat, mascota.sexo, mascota.tamaño, mascota.descripcion, protectora.direccion, mascota.imagenPerfil, mascota.imagen1, mascota.imagen2 FROM mascota join protectora using (idProtectora) WHERE idMascota = $id";
+			$sql = "SELECT mascota.nombre AS nombreMascota, protectora.nombre, mascota.idProtectora AS idProtectora, mascota.edat, mascota.sexo, mascota.tamaño, mascota.descripcion, protectora.direccion, mascota.imagenPerfil, mascota.imagen1, mascota.imagen2 FROM mascota join protectora using (idProtectora) WHERE idMascota = $id";
 			$result = mysqli_query($conn, $sql);
 			$cont = 0;
 
@@ -39,6 +39,7 @@
 			$imagenPerfil = "imagenPerfil";
 			$imagen1 = "imagen1";
 			$imagen2 = "imagen2";
+			$idProtectora = "idProtectora";
 			if ($num_filas > 0) {
 			while ($line = mysqli_fetch_array($result) ) {
 			  
@@ -58,7 +59,7 @@
 						    	<p>".$line[$edad]." años · ".$line[$sexo]." · ".$line[$tamaño]."</p>
 						    </div>
 						    <div class=\"linkProtectora\">
-						    	<a href=\"protectora.php\"><img src=\"images/caseta.png\">".$line[$nombre]."</a>
+						    	<a href=protectora.php?id=".$line[$idProtectora]." onclick=\"mostraModal(1,2,".$id.")><img src=\"images/caseta.png\">".$line[$nombre]."</a>
 							</div>
 						    <br>
 						    <div class=\"contenidoPerfil\">
