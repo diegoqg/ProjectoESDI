@@ -66,7 +66,7 @@
 							</div>
 						    <div class=\"buttons\">
 							   <form>
-							   	 	<input type=\"button\" onclick=\"window.location.href='mailto:protectora@example.com?Subject=Urgente';\" value=\"Contacta con el refugio\" class=\"button\" />
+							   	 	<input type=\"button\" onclick=\"window.location.href='contacto.php';\" value=\"Contacta con el refugio\" class=\"button\" />
 							   	 	<input type=\"button\" onclick=\"window.location.href='mailto:protectora@example.com?Subject=".$line[$nombreMascota]."';\" value=\"Apadrina a ".$line[$nombreMascota]."\" class=\"button\" />
 								    <button class=\"button\">Compartir</button>
 								 </form>
