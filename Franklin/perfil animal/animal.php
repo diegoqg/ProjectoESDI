@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<title>Ventana modal</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="estilos.css">
-	</head>
-	<body>
-		
+
 		<?php
+		function modalAnimal($id){
 			$servername = "localhost";
 			$username = "root";
 			$password = "1234";
 			$dbname = "pethome";
-			$id = $_GET['id'];
+			
 			$conn = new mysqli($servername, $username, $password, $dbname);
 								
 			if ($conn->connect_error) {
@@ -52,22 +44,21 @@
 			  
 				echo "
 				    <div class=\"contenedor\">
-					<a href=\"#openmodal\" class=\"open\">Abrir Ventana</a>
-					<section id=\"openmodal\" class=\"modalDialog\">
+					<section id=\"openmodal".$id."\" class=\"modalDialog\">
 					<section class=\"modal\">
-					<a href=\"#close\" class=\"close\"> X </a>
+					<a href=\"#close\" class=\"close\" onclick=\"mostraModal(1,2,".$id.")\"> X </a>
 					   	 <section class='modal-item uno'>
 						  	<div class=\"titulo\">
 						   		<h2>".$line[$nombreMascota]."</h2>
 							</div>
 							<div class=\"ubicacion\">
-								<p><img src=\"ubicación.png\">".$line[$direccion]."</p>
+								<p><img src=\"images/ubicacion.png\">".$line[$direccion]."</p>
 							</div>
 							<div class=\"infoAnimal\">
 						    	<p>".$line[$edad]." años · ".$line[$sexo]." · ".$line[$tamaño]."</p>
 						    </div>
 						    <div class=\"linkProtectora\">
-						    	<a href=\"protectora.php\"><img src=\"caseta.png\">".$line[$nombre]."</a>
+						    	<a href=\"protectora.php\"><img src=\"images/caseta.png\">".$line[$nombre]."</a>
 							</div>
 						    <br>
 						    <div class=\"contenidoPerfil\">
@@ -160,7 +151,7 @@
 		}
 
 		$conn->close();
+		}
+
 	?>
 
-	</body>
-</html>
