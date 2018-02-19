@@ -23,7 +23,7 @@ input[type=password], select, textarea {
 	margin-bottom: 16px;
 	resize: vertical;
 }
-.inputContacto input[type=submit] {
+input[type=submit] {
 	background-color: #f88425;
 	color: white;
 	padding: 12px 235px;
@@ -32,7 +32,7 @@ input[type=password], select, textarea {
 	cursor: pointer;
 }
 
-.inputContacto input[type=submit]:hover {
+input[type=submit]:hover {
 	background-color: #c65c06;
 }
 
