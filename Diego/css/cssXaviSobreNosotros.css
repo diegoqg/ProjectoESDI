@@ -29,8 +29,9 @@ input[type=submit]:hover {
 .containerSobre {
 	border-radius: 5px;
 	padding-top: 100px;
-	padding-left: 100px;
-	padding-right: 1050px;
+	padding-left: 200px;
+	padding-right: 750px;
+	padding-bottom: 150px;
 }		
 
 .titolSobre {			
