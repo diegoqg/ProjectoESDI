@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     
 	<!-- CSS Y Script Murci para Modal Login -->
-	<link rel="stylesheet" href="css/estiloMurciano.css">	
+	<link rel="stylesheet" href="css/estiloMurciano.css">
+	<link rel="stylesheet" type="text/css" href="css/cssMurciano.css" title="style">	
 	<script src="js/murciscript.js"></script>
 
 	<!--CSS y cosas Albert-->
@@ -125,7 +126,7 @@
 							</form>
 						</div>
 						<p> ¿ No tienes cuenta ? </p>
-						<p><a href="" >Registrate</a> ya!</p>						
+						<p><a href="registro.php" >Registrate</a> ya!</p>						
 					</section>  					  							 	
 				</section>
 			</section>
@@ -167,7 +168,7 @@
 							</form>
 						</div>
 						<p> ¿ No tienes cuenta ? </p>
-						<p><a href="" >Registrate</a> ya!</p>						
+						<p><a href="registro.php" >Registrate</a> ya!</p>						
 					  </section>  					  							 	
 				</section>
 			</section>
