@@ -57,9 +57,9 @@ if(isset($_POST["nombrePerro"])){
 							border-radius:0px 0px 14px 14px;
 							border-color:#B8B8B8;
 							margin-top:-5px;'>
-							<h4 class=pbnombre style='color:#F88425; margin-top:0px; margin-bottom:-15px;'> <img src=images/nada.png width=15px height=25px alt=iconoUbicacion>".$line[$nombre]."</h4>
-							<b class=pbinfor></br><img src=images/nada.png width=15px height=10px alt=iconoUbicacion>".$razaPerro."</b>
-							<p style='margin-top:-4px;'><img src=images/nada.png width=15px height=25px alt=iconoUbicacion>".$line[$edad]." ".$line[$unidadEdad]." · ".$line[$sexo]." · ".$line[$tamaño]."
+							<h4 class=pbnombre style='color:#F88425; margin-top:0px; margin-bottom:-15px;'>".$line[$nombre]."</h4>
+							<b class=pbinfor></br>".$razaPerro."</b>
+							<p style='margin-top:-4px;'>".$line[$edad]." ".$line[$unidadEdad]." · ".$line[$sexo]." · ".$line[$tamaño]."
 							
 						</div>
 		        ";
