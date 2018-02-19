@@ -15,15 +15,15 @@
 			<h3 class="titolContacto">env&iacuteanos un mensaje</h3>
 			<form action="mailto:miusuario@miemail.com">
 				<label for="fname"></label>
-				<input type="text" id="fname" name="firstname" placeholder="Nombre...">
+				<input class="inputContacto" type="text" id="fname" name="firstname" placeholder="Nombre...">
 
 				<label for="lmail"></label>
-				<input type="text" id="lmail" name="email" placeholder="Direccion de correo electronico...">
+				<input class="inputContacto" type="text" id="lmail" name="email" placeholder="Direccion de correo electronico...">
 
 				<label for="subject"></label>
 				<textarea id="subject" name="subject" placeholder="Mensaje..." style="height:200px"></textarea>
 
-				<input type="submit" value="Enviar">
+				<input class="inputContacto" type="submit" value="Enviar">
 			</form>
 		</div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

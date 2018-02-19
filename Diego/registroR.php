@@ -19,7 +19,7 @@
 		$telefono = $_POST['telefono'];
 		$name_C = $_POST['name_contacto'];
 		$apellido_C = $_POST['apellido_contacto'];
-		$dir_subida = 'C:\\xampp\\htdocs\\proyecto\\images\\';
+		$dir_subida = 'images\\';
 		$img_P = $dir_subida . basename($_FILES['img_perfil']['name']);
 		$img_C = $dir_subida . basename($_FILES['img_contacto']['name']);
 		$iniQuery = "INSERT INTO protectora VALUES(NULL,'".$name."','".$Email."','".$nif."',".$idComunidad.",'".$direccion."','".$telefono."',md5(".$pass.")";

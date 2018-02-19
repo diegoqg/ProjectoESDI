@@ -10,26 +10,12 @@
 	}
 
 ?>
-<script>
-		  function cambiaVisibilidadRegistroRegistro(s){
-			  var div1 = document.getElementById('form_user');
-			  var div2 = document.getElementById('form_refuge');
-			  if (s==1){
-				 div2.style.display = 'none';
-				 div1.style.display = 'block'; 
-			  }
-			  if(s==2){
-				 div1.style.display = 'none';
-				 div2.style.display = 'block';  
-			  }
-		  }
-		</script>
 		<div class="register-div">
 			<div>
-				<button id="btn_user" class="miBtnUser" onclick="cambiaVisibilidadRegistro(1)">Usuario</button>
-				<button id="btn_refuge" class="miBtnUser" onclick="cambiaVisibilidadRegistro(2)">Refugio</button>
+				<button id="btn_user" class="miBtnUser" onclick="cambiaVisibilidads(1)">Usuario</button>
+				<button id="btn_refuge" class="miBtnUser" onclick="cambiaVisibilidads(2)">Refugio</button>
 			</div>
-			<div class="form_register form_user1" id="form_user">
+			<div class="form_register form_user1" id="form_Ruser">
 				<form action="registroN.php" method="post" enctype="multipart/form-data" >	
 					<div>
 						<label>E-Mail: </label>
@@ -57,7 +43,7 @@
 						<?php
 							$host_db = "localhost";
 							$user_db = "root";
-							$pass_db = "";
+							$pass_db = "1234";
 							$db_name = "pethome";
 							$tbl_name = "comunidades";
 							$mysqli = new mysqli($host_db, $user_db, $pass_db, $db_name);
@@ -86,7 +72,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="form_register form_user2" id="form_refuge">
+			<div class="form_register form_user2" id="form_Rrefuge">
 				<form action="registroR.php" method="post" enctype="multipart/form-data" >
 					<div>
 						<label>Nombre: </label>
@@ -102,7 +88,7 @@
 					</div>
 					<div>					
 						<label>NIF: </label>
-						<input type="tex" name="NIF" class="" required/>
+						<input type="text" name="NIF" class="" required/>
 					</div>
 					<div>
 						<label>Direccion: </label>
@@ -114,7 +100,7 @@
 						<?php
 							$host_db = "localhost";
 							$user_db = "root";
-							$pass_db = "";
+							$pass_db = "1234";
 							$db_name = "pethome";
 							$tbl_name = "comunidades";
 							$mysqli = new mysqli($host_db, $user_db, $pass_db, $db_name);
@@ -156,10 +142,5 @@
 				</form>
 			</div>
 		</div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
-  </body>
-
 <?php require 'footer.php';
 ?>

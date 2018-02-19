@@ -20,8 +20,8 @@
     
 	<!-- CSS Y Script Murci para Modal Login -->
 	<link rel="stylesheet" href="css/estiloMurciano.css">
-	<link rel="stylesheet" type="text/css" href="css/cssMurciano.css" title="style">	
-	<script src="js/murciscript.js"></script>
+	<link rel="stylesheet" href="css/cssMurciano.css">	
+	<script src="js/murciscript.js"></script>	
 
 	<!--CSS y cosas Albert-->
 	<link rel="stylesheet" href="css/borderAlbert.css">  

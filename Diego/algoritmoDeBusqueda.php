@@ -140,7 +140,7 @@
 		    //Diferencia si es urgente o no para poder printearlo
 		    if(strcmp($row[$urgMascota],"Si")==0)
 				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem;>
-		          <a href=#openmodal".$row[$idMascota].">
+		          <a href=#openmodal".$row[$idMascota]." onclick=mostraModal(1,1,".$row[$idMascota].")>
 		          	<img class=card-img-top src=".$row[$imgPerfilMascota]." alt=Card image cap>
 		          </a>
 		          <p><b>¡URGENTE!</b></p> 
@@ -156,7 +156,7 @@
 
 		    else
 				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem;>
-		          <a href=#openmodal".$row[$idMascota].">
+		          <a href=#openmodal".$row[$idMascota]." onclick=mostraModal(1,1,".$row[$idMascota].")>
 		          	<img class=card-img-top src=".$row[$imgPerfilMascota]." alt=Card image cap>
 		          </a>
 		          <div class=card-block>

@@ -13,7 +13,17 @@ input[type=text], select, textarea {
 	resize: vertical;
 }
 
-input[type=submit] {
+input[type=password], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+.inputContacto input[type=submit] {
 	background-color: #f88425;
 	color: white;
 	padding: 12px 235px;
@@ -22,7 +32,7 @@ input[type=submit] {
 	cursor: pointer;
 }
 
-input[type=submit]:hover {
+.inputContacto input[type=submit]:hover {
 	background-color: #c65c06;
 }
 

@@ -18,8 +18,9 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     
 <!-- CSS Y Script Murci para Modal Login -->
-	<link rel="stylesheet" href="css/estiloMurciano.css">	
-	<script src="js/murciscript.js"></script>
+	<link rel="stylesheet" href="css/estiloMurciano.css">
+	<link rel="stylesheet" href="css/cssMurciano.css">	
+	<script src="js/murciscript.js"></script>	
 
 	<!--CSS y cosas Albert-->
 	<link rel="stylesheet" href="css/borderAlbert.css">  

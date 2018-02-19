@@ -52,3 +52,16 @@
 				 div4.style.display = 'block';  
 			  }
 		  }
+		  
+		  function cambiaVisibilidads(s){
+			  var div1 = document.getElementById('form_Ruser');
+			  var div2 = document.getElementById('form_Rrefuge');
+			  if (s==1){
+				 div2.style.display = 'none';
+				 div1.style.display = 'block'; 
+			  }
+			  if(s==2){
+				 div1.style.display = 'none';
+				 div2.style.display = 'block';  
+			  }
+		  }
