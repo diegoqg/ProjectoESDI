@@ -13,7 +13,7 @@
 		<div class="containerContacto">
 			<h3 class="titolContacto">Si tienes cualquier duda,</h3>
 			<h3 class="titolContacto">env&iacuteanos un mensaje</h3>
-			<form action="/action_page.php">
+			<form action="mailto:miusuario@miemail.com">
 				<label for="fname"></label>
 				<input type="text" id="fname" name="firstname" placeholder="Nombre...">
 

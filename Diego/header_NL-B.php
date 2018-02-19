@@ -32,6 +32,7 @@
 	
 	<!--CSS frankin-->
 	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/nomecopie.js"></script>
 
   </head>
   <body>

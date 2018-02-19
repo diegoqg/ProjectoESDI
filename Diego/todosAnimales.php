@@ -80,7 +80,7 @@
 			}
 			if(strcmp($line[$urgente],"Si")==0)
 				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card id=pruebaUrgente style=width: 20rem;>
-		          <a href=#openmodal".$line[$idMascota].">
+		          <a href=#openmodal".$line[$idMascota]." onclick=mostraModal(1,1,".$line[$idMascota].")>
 		          	<img class=card-img-top src=".$line[$imagenPerfil]." alt=Card image cap>
 		          </a>
 		          <p><b>¡URGENTE!</b></p> 
@@ -96,7 +96,7 @@
 
 		    else
 				echo "<div class=col-xl-3 col-lg-4 col-md-6 col-sm-12 card style=width: 20rem;>
-		          <a href=#openmodal".$line[$idMascota].">
+		          <a href=#openmodal".$line[$idMascota]." onclick=mostraModal(1,1,".$line[$idMascota].")>
 		          	<img class=card-img-top src=".$line[$imagenPerfil]." alt=Card image cap>
 		          </a>
 		          <div class=card-block>

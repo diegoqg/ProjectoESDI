@@ -46,7 +46,7 @@
 				    <div class=\"contenedor\">
 					<section id=\"openmodal".$id."\" class=\"modalDialog\">
 					<section class=\"modal\">
-					<a href=\"#close".$id."\" class=\"close\" onclick=\"mostraLogin1(1,2)\"> X </a>
+					<a href=\"#close\" class=\"close\" onclick=\"mostraModal(1,2,".$id.")\"> X </a>
 					   	 <section class='modal-item uno'>
 						  	<div class=\"titulo\">
 						   		<h2>".$line[$nombreMascota]."</h2>
@@ -66,7 +66,7 @@
 							</div>
 						    <div class=\"buttons\">
 							   <form>
-							   	 	<input type=\"button\" onclick=\"window.location.href='mailto:protectora@example.com?Subject=Urgente';\" value=\"Contacta con el refugio\" class=\"button\" />
+							   	 	<input type=\"button\" onclick=\"window.location.href='contacto.php';\" value=\"Contacta con el refugio\" class=\"button\" />
 							   	 	<input type=\"button\" onclick=\"window.location.href='mailto:protectora@example.com?Subject=".$line[$nombreMascota]."';\" value=\"Apadrina a ".$line[$nombreMascota]."\" class=\"button\" />
 								    <button class=\"button\">Compartir</button>
 								 </form>
