@@ -10,7 +10,7 @@
 	}
 
 ?>
-		<div class="containerSobre">
+		<div class="containerSobre" style="margin: 10%;">
 			<h3 class="titolSobre">Con&oacutecenos y descubre porqu&eacute,</h3>
 			<h3 class="titolSobre">somos la mejor opci&oacuten</h3>
 			<br>
