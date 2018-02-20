@@ -59,7 +59,7 @@
 						    	<p>".$line[$edad]." años · ".$line[$sexo]." · ".$line[$tamaño]."</p>
 						    </div>
 						    <div class=\"linkProtectora\">
-						    	<a href=protectora.php?id=".$line[$idProtectora]." onclick=\"mostraModal(1,2,".$id.")><img src=\"images/caseta.png\">".$line[$nombre]."</a>
+						    	<a href=protectora.php?id=".$line[$idProtectora]." onclick=\"mostraModal(1,2,".$id.")\"><img src=\"images/caseta.png\">".$line[$nombre]."</a>
 							</div>
 						    <br>
 						    <div class=\"contenidoPerfil\">

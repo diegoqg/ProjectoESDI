@@ -105,6 +105,8 @@ p{
   	height: 20em;
   	margin: .2em 1em 1em 0;
   	width: 20em;
+  	padding-right: 2%;
+  	padding-top: 2%;
   	max-width: 250px;
 	align-self: center;
 	-webkit-align-self: center;
